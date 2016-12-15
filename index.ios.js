@@ -12,46 +12,37 @@ import {
   View
 } from 'react-native';
 
-export default class ReactNativeWorkshop extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          {/*Change text below*/}
-          Welcome to React Native Workshop!
-        </Text>
-        <Text style={styles.instructions}>
-          Presented by Brandy Bergh and Josh Pagley
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
-    );
-  }
-}
+import App from './app/containers/app';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+// export class ReactNativeWorkshop extends Component {
+//   render() {
+//     return (
+//       <View style={styles.container}>
+//         <View>
+//           <App />
+//         </View>
+//       </View>
+//     );
+//   }
+// }
+//
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     backgroundColor: '#F5FCFF',
+//   },
+//   welcome: {
+//     fontSize: 20,
+//     textAlign: 'center',
+//     margin: 10,
+//   },
+//   instructions: {
+//     textAlign: 'center',
+//     color: '#333333',
+//     marginBottom: 5,
+//   },
+// });
 
-AppRegistry.registerComponent('ReactNativeWorkshop', () => ReactNativeWorkshop);
+AppRegistry.registerComponent('ReactNativeWorkshop', ()=> App);

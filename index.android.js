@@ -11,6 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
+import App from './app/containers/app'
 
 export default class ReactNativeWorkshop extends Component {
   render() {
@@ -26,6 +27,7 @@ export default class ReactNativeWorkshop extends Component {
           Double tap R on your keyboard to reload,{'\n'}
           Shake or press menu button for dev menu
         </Text>
+        <App />
       </View>
     );
   }

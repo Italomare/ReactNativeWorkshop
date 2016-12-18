@@ -1,24 +1,27 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-export class Profile extends Component{
+class GifSelectionScene extends Component{
+
   render(){
     return(
       <View style={styles.container}>
-        <Text style={styles.text}> PROFILE </Text>
+        <Text style={styles.text}>Gif Selection Scene</Text>
       </View>
-
     )
   }
+
 }
 
 const styles = StyleSheet.create({
   container:{
     flex:1,
     justifyContent: 'center',
-    backgroundColor: '#00A896'
+    backgroundColor: '#F0F3BD'
   },
   text:{
-    color:'#F0F3BD'
+    color:'#05668D'
   }
 })
+
+export default GifSelectionScene;

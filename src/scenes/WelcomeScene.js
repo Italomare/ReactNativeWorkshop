@@ -50,8 +50,6 @@ const styles = StyleSheet.create({
   },
   logo:{
     alignSelf:'center'
-    // width: 150,
-    // height: 60,
   },
   textContainer:{
     flex:5,

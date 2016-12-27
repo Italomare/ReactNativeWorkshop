@@ -7,8 +7,7 @@ class Category extends Component{
   render(){
 
     let { category, onSelect } = this.props;
-    console.log(category.title);
-    console.log(category.url);
+
     return(
      <View style={styles.container}>
       <TouchableHighlight onPress={() => onSelect(category)}>

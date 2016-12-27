@@ -9,7 +9,7 @@ class SelectionCarousel extends Component{
 
   render(){
 
-    let { gif, onLike, onDislike } = this.props; 
+    let { gif, onLike, onDislike } = this.props;
 
     return(
       <View style={styles.container}>
@@ -18,10 +18,10 @@ class SelectionCarousel extends Component{
         </View>
         <View style={styles.buttonContainer}>
           <Button onPress={() => onLike(gif.id)} style={styles.dislikeButton}>
-            Dislike 
+            Dislike
           </Button>
           <Button onPress={() => onDislike(gif.id)} style={styles.likeButton}>
-            Like 
+            Like
           </Button>
         </View>
       </View>
@@ -34,25 +34,40 @@ const styles = StyleSheet.create({
   container:{
     flex:1,
     justifyContent: 'center',
+    backgroundColor:Colors.black
   },
   gifContainer:{
-    flex: .8,
+    flex: 8,
     justifyContent: 'center',
   },
   buttonContainer: {
-    flex: .2,
+    flex: 4,
     flexDirection: 'row',
     justifyContent: 'space-around'
   },
   dislikeButton: {
     borderColor: Colors.grey,
     borderWidth: 1,
-    color: Colors.grey
+    color: Colors.grey,
+    paddingTop:15,
+    paddingBottom:15,
+    paddingLeft:30,
+    paddingRight:30,
+    marginTop:60,
+    fontSize:17,
+    letterSpacing:3
   },
   likeButton: {
     borderColor: Colors.yellow,
     borderWidth: 1,
-    color: Colors.yellow
+    color: Colors.yellow,
+    paddingTop:15,
+    paddingBottom:15,
+    paddingLeft:45,
+    paddingRight:45,
+    marginTop:60,
+    fontSize:17,
+    letterSpacing:3
   }
 })
 

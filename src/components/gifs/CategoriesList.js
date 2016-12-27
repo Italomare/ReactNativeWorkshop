@@ -7,7 +7,7 @@ class CategoriesList extends Component{
 
   constructor(props) {
     super(props);
-    this.getCategories = this.getCategories.bind(this); 
+    this.getCategories = this.getCategories.bind(this);
   }
 
   render(){
@@ -20,7 +20,7 @@ class CategoriesList extends Component{
     )
   }
 
-  
+
   getCategories() {
 
     let { categories, onSelect } = this.props;

@@ -1,12 +1,17 @@
 import React, {Component} from 'react';
 import {View, StyleSheet} from 'react-native';
-import {Actions} from 'react-native-router-flux';
+import {Actions as RouteActions} from 'react-native-router-flux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import * as ActionCreators from '../actions/actions';
 
 import CategoriesList from '../components/gifs/CategoriesList';
 
 class CategoriesContainer extends Component{
 
-  super(props) {
+  constructor(props) {
+    super(props);
     this.handleSelection = this.handleSelection.bind(this);
   }
 
@@ -31,9 +36,12 @@ class CategoriesContainer extends Component{
   }
 
   handleSelection(category) {
-    console.log('handle category selection: ', category);
-    console.log('handleSelection actions: ', Actions);
-    Actions.gifs();
+
+    this.props.Actions.setCategory(category);
+    this.props.Actions.getGifs(category);
+
+    RouteActions.gifs();
+
   }
 
 }
@@ -45,4 +53,11 @@ const styles = StyleSheet.create({
   }
 })
 
-export default CategoriesContainer;
+function mapDispatchToProps(dispatch) {
+  return {
+    Actions: bindActionCreators(ActionCreators, dispatch),
+  };
+}
+
+export default connect(null, mapDispatchToProps)(CategoriesContainer);
+

@@ -1,5 +1,10 @@
 import React, {Component} from 'react';
+import { Actions as RouteActions } from 'react-native-router-flux';
 import {View, Text, StyleSheet} from 'react-native';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import * as ActionCreators from '../actions/actions';
 
 import SelectionCarousel from '../components/gifs/SelectionCarousel';
 
@@ -11,27 +16,29 @@ class GifSelectionContainer extends Component{
     this.handleLike = this.handleLike.bind(this);
     this.handleDislike = this.handleDislike.bind(this);
 
-    this.state = {
-      active: 1,
-      gifs: {
-        1: {id: 1, uri: 'https://i.giphy.com/xThuWg7lusylvpAVu8.gif'},
-        2: {id: 2, uri: 'https://i.giphy.com/l2YWeYNrD6P5nCiCA.gif'},
-        3: {id: 3, uri: 'https://i.giphy.com/xTk9ZZCndSIbxjRO8w.gif'},
-        4: {id: 4, uri: 'https://media.giphy.com/media/26FLeFK9dfmg6xq12/source.gif'},
-        5: {id: 5, uri: 'https://i.giphy.com/3ohfFn9vOub5BsZZ0k.gif'}
-      }
-    };
+  }
+
+  componentWillReceiveProps(nextProps) {
+
+    /**
+     * When all gifs have been liked/disliked route to categories to start over 
+     */
+    if (Object.keys(nextProps.gifs.items).length < 1) RouteActions.pop();
 
   }
 
   render(){
     
-    let { gifs, active } = this.state;
+    let { gifs } = this.props;
+
+    let activeGifId = Object.keys(gifs.items).pop();
+
+    if (!activeGifId) return null;
 
     return(
       <View style={styles.container}>
         <SelectionCarousel 
-          gif={gifs[active]} 
+          gif={gifs.items[activeGifId]} 
           onLike={this.handleLike}
           onDislike={this.handleDislike}
         />
@@ -40,13 +47,17 @@ class GifSelectionContainer extends Component{
   }
 
   handleLike(id) {
-    console.log('handleLike: ', id);
-    this.setState({active: ++id});
+
+    let { gifs, Actions } = this.props;
+    Actions.like(gifs.items[id]);
+
   }
 
   handleDislike(id) {
-    console.log('handleDislike: ', id);
-    this.setState({active: ++id});
+
+    let { gifs, Actions } = this.props;
+    Actions.dislike(gifs.items[id]);
+
   }
 
 }
@@ -61,4 +72,14 @@ const styles = StyleSheet.create({
   }
 })
 
-export default GifSelectionContainer;
+function mapStateToProps(state) {
+  return { gifs: state.gifs };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    Actions: bindActionCreators(ActionCreators, dispatch),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(GifSelectionContainer);

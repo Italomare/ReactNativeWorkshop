@@ -22,8 +22,8 @@ export default function GifsReducer(state = {category: null, items: {}, isLoadin
 
     case GET_GIFS_SUCCESS:
       return {
-        ...state, 
-        isLoading: false, 
+        ...state,
+        isLoading: false,
         items: convertGiphyResponse(action.payload.gifs)
       };
 
@@ -51,14 +51,14 @@ export default function GifsReducer(state = {category: null, items: {}, isLoadin
 /**
  * Convert an array of objects
  *
- * @param {Array} array 
+ * @param {Array} array
  * @param {String|Number} key
  *
  * Example Input:
  * param key = 'name';
  * param array = [{name: 'frank', age: 19}, {name: 'joe', age: 22}, {name: 'bob', age: 44}]
  *
- * Example return: 
+ * Example return:
  * {
  *   'frank': {name: 'frank', age: 19} ,
  *   'joe': {name: 'joe', age: 22} ,
@@ -66,12 +66,11 @@ export default function GifsReducer(state = {category: null, items: {}, isLoadin
  * }
  */
 function convertGiphyResponse(gifs){
-
   let normalizedObj = {};
-  
+
   gifs.forEach((gif) => {
-    let formattedUri = gif.images.fixed_width.url.replace('http', 'https')
-    normalizedObj[gif.id] = {id: gif.id, uri: formattedUri}; 
+    let formattedUri = gif.images.fixed_width.url
+    normalizedObj[gif.id] = {id: gif.id, uri: formattedUri};
   });
 
   return normalizedObj;

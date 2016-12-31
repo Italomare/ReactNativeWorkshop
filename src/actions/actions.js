@@ -19,7 +19,7 @@ export const GET_GIFS_FAILURE = 'GET_GIFS_FAILURE';
 
 export const SET_CATEGORY = 'SET_CATEGORY';
 
-import * as api from '../api/giphyApi';
+import * as giphyApi from '../api/giphyApi';
 
 /**
  * Login
@@ -154,7 +154,7 @@ export function getLikesFailure(error) {
  */
 export function getGifs(category) {
   return (dispatch) => {
-   api.getGiphyGifs(category).then((result) => { //retrieving the gifs by calling the api
+   giphyApi.getGiphyGifs(category).then((result) => { //retrieving the gifs by calling the api
      dispatch(getGifsSuccess(result.data)); //dispatching the success
     }).catch((error) => {
       dispatch(getGifsFailure(error));

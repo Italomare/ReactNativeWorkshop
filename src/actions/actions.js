@@ -1,4 +1,5 @@
 import * as FirebaseApi from '../api/firebaseApi';
+import * as giphyApi from '../api/giphyApi';
 
 export const LOGIN_REQUESTED = 'LOGIN_REQUESTED'
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
@@ -20,20 +21,20 @@ export const GET_GIFS_FAILURE = 'GET_GIFS_FAILURE';
 
 export const SET_CATEGORY = 'SET_CATEGORY';
 
-
 /**
- * Login 
+ * Login
  *
- * @param username 
+ * @param username
  */
 export function login(username) {
   return (dispatch) => {
     dispatch(loginRequested());    
+
     FirebaseApi.createUser(username)
       .then((results) => {
-        console.log('login user: ', results); 
         dispatch(loginSuccess(username));    
       });
+
   };
 };
 
@@ -58,10 +59,10 @@ export function loginFailure(error) {
 }
 
 /**
- * Like a gif 
+ * Like a gif
  *
- * @param gifId 
- * @param uri 
+ * @param gifId
+ * @param uri
  */
 export function like(gif) {
   return (dispatch, getState) => {
@@ -74,7 +75,6 @@ export function like(gif) {
       .then((result) => {
         dispatch(likeSuccess(gif));    
       });
-
   };
 };
 
@@ -99,9 +99,9 @@ export function likeFailure(error) {
 }
 
 /**
- * Dislike a gif 
+ * Dislike a gif
  *
- * @param gifId 
+ * @param gifId
  */
 export function dislike(gif) {
   return{
@@ -111,9 +111,9 @@ export function dislike(gif) {
 };
 
 /**
- * Get Gifs by Category 
+ * Get Gifs by Category
  *
- * @param category 
+ * @param category
  */
 export function getLikes() {
   return (dispatch, getState) => {
@@ -154,44 +154,20 @@ export function getLikesFailure(error) {
 }
 
 /**
- * Get Gifs by Category 
+ * Get Gifs by Category
  *
- * @param category 
+ * @param category
  */
 export function getGifs(category) {
   return (dispatch) => {
 
-    let giphyResponse = {
-      data: [
-        { 
-          id: 0,
-          images: {
-            fixed_width: {url: 'http://i.giphy.com/xThuWg7lusylvpAVu8.gif'}
-          }
-        },
-        { 
-          id: 1,
-          images: {
-            fixed_width: {url: 'http://i.giphy.com/l2YWeYNrD6P5nCiCA.gif'}
-          }
-        },
-        { 
-          id: 2,
-          images: {
-            fixed_width: {url: 'http://i.giphy.com/xTk9ZZCndSIbxjRO8w.gif'}
-          }
-        },
-        { 
-          id: 3,
-          images: {
-            fixed_width: {url: 'http://i.giphy.com/3ohfFn9vOub5BsZZ0k.gif'}
-          }
-        }
-      ]
-    };
+   dispatch(getGifsRequested());
 
-    dispatch(getGifsRequested());    
-    dispatch(getGifsSuccess(giphyResponse.data));    
+   giphyApi.getGiphyGifs(category).then((result) => { //retrieving the gifs by calling the api
+     dispatch(getGifsSuccess(result.data)); //dispatching the success
+    }).catch((error) => {
+      dispatch(getGifsFailure(error));
+    })
 
   };
 };

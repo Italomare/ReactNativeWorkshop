@@ -14,7 +14,6 @@ class ProfileContainer extends Component{
   }
 
   componentWillMount() {
-    console.log('componentWillMount getLikes');
     this.props.Actions.getLikes();
   }
 

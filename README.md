@@ -13,7 +13,7 @@
  * **Step 2** - Type in terminal `git clone git@github.com:zionlabs/ReactNativeWorkshop.git`
 
 * **Run React Native App:**
- * **Step 3** - In the terminal navigate to the directory created in step 3 from the git clone operation.
+ * **Step 3** - Type in terminal `git checkout step2`
  * **Step 4** - Type in terminal `npm install`
  * **Step 5** - Type in terminal `react-native run-ios`
 

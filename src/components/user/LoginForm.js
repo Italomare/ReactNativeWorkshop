@@ -58,6 +58,9 @@ const styles = StyleSheet.create({
     flex:2,
     marginTop:150
   },
+  logo:{
+    alignSelf:'center'
+  },
   text:{
     color: Colors.grey,
     fontSize:17,
@@ -88,14 +91,7 @@ const styles = StyleSheet.create({
     marginTop:60,
     fontSize:17,
     letterSpacing:3
-  },
-  logoContainer:{
-    flex:2,
-    marginTop:150
-  },
-  logo:{
-    alignSelf:'center'
-  },
+  }
 })
 
 export default LoginForm;

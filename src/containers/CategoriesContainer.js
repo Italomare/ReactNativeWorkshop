@@ -6,8 +6,9 @@ import CategoriesList from '../components/gifs/CategoriesList';
 
 class CategoriesContainer extends Component{
 
-  super(props) {
-    this.handleSelection = this.handleSelection.bind(this);
+  constructor(props){
+    super(props);
+      this.handleSelection = this.handleSelection.bind(this)
   }
 
   render(){

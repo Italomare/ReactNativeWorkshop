@@ -1,15 +1,14 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-import Button from 'react-native-button';
-import { Actions } from 'react-native-router-flux';
+import {View, StyleSheet} from 'react-native';
+
+import LoginContainer from '../containers/LoginContainer';
 
 class LoginScene extends Component{
 
   render(){
     return(
       <View style={styles.container}>
-        <Text style={styles.text}>Login Scene</Text>
-        <Button onPress={Actions.tabbar} style={styles.button}>Login</Button>
+        <LoginContainer />
       </View>
     )
   }
@@ -18,14 +17,7 @@ class LoginScene extends Component{
 
 const styles = StyleSheet.create({
   container:{
-    flex:1,
-    justifyContent: 'center',
-  },
-  text:{
-    color:'#05668D'
-  },
-  button: {
-    color:'#05668D',
+    flex:1
   }
 })
 

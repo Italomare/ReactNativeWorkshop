@@ -19,6 +19,30 @@ export const GET_GIFS_FAILURE = 'GET_GIFS_FAILURE';
 export const SET_CATEGORY = 'SET_CATEGORY';
 
 /**
+ * Step 4:
+ * L O G I N
+ * - Create login function
+ * - Create loginRequested function
+ * - Create loginSuccess function
+ * - Create loginFailure function
+ * - Dispatch login and loginSuccess within login function
+ ******************************************
+ * G E T  G I F S  by L I K E
+ * - Create getLikes function with temporary gifs
+ * - Dispatch getLikesRequested and getLikesSuccess within getLikes function
+ ******************************************
+ * G E T  G I F S  by C A T E G O R Y
+ * - Create getGifs function with a hard coded data object
+ ******************************************
+ * G I F S ********************************
+ https://i.giphy.com/xThuWg7lusylvpAVu8.gif
+ https://i.giphy.com/l2YWeYNrD6P5nCiCA.gif
+ https://i.giphy.com/xTk9ZZCndSIbxjRO8w.gif
+ https://media.giphy.com/media/26FLeFK9dfmg6xq12/source.gif
+ https://media.giphy.com/media/26FLeFK9dfmg6xq12/source.gif
+ */
+
+/**
 * Login
 *
 * @param username
@@ -32,7 +56,25 @@ export const SET_CATEGORY = 'SET_CATEGORY';
 * @param category
 */
 
+export function getLikesRequested() {
+  return {
+    type: GET_LIKES_REQUESTED
+  };
+};
 
+export function getLikesSuccess(gifs) {
+  return {
+    type: GET_LIKES_SUCCESS,
+    payload: { gifs }
+  };
+};
+
+export function getLikesFailure(error) {
+  return{
+    type: GET_LIKES_FAILURE,
+    payload: { error }
+  }
+}
 
 /**
 * Like a gif
@@ -42,13 +84,37 @@ export const SET_CATEGORY = 'SET_CATEGORY';
 */
 
 
+export function likeRequested() {
+  return {
+    type: LIKE_REQUESTED
+  };
+};
+
+export function likeSuccess(gif) {
+  return {
+    type: LIKE_SUCCESS,
+    payload: { gif }
+  };
+};
+
+export function likeFailure(error) {
+  return{
+    type: LIKE_FAILURE,
+    payload: { error }
+  }
+}
 
 /**
 * Dislike a gif
 *
 * @param gifId
 */
-
+export function dislike(gif) {
+  return{
+    type: DISLIKE,
+    payload: { gif }
+  }
+};
 
 
 /**
@@ -57,8 +123,33 @@ export const SET_CATEGORY = 'SET_CATEGORY';
  * @param category
  */
 
+ export function getGifsRequested() {
+   return {
+     type: GET_GIFS_REQUESTED
+   };
+ };
 
+ export function getGifsSuccess(gifs) {
+   return {
+     type: GET_GIFS_SUCCESS,
+     payload: { gifs }
+   };
+ };
+
+ export function getGifsFailure(error) {
+   return{
+     type: GET_GIFS_FAILURE,
+     payload: { error }
+   }
+ }
 
 /**
 * Set Gif Category
 */
+
+export function setCategory(category) {
+  return{
+    type: SET_CATEGORY,
+    payload: { category }
+  }
+}

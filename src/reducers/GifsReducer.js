@@ -9,34 +9,14 @@ import {
   LIKE_FAILURE
 } from '../actions/actions';
 
+/**
+ * Step:4
+ * Setup switch statement
+ *
+ */
+
 export default function GifsReducer(state = {category: null, items: {}, isLoading: false, error: null}, action) {
 
-  switch(action.type) {
-
-    case SET_CATEGORY:
-      // return
-
-    case LIKE_REQUESTED:
-    case GET_GIFS_REQUESTED:
-      // return
-
-    case GET_GIFS_SUCCESS:
-      // return
-
-    case DISLIKE:
-    case LIKE_SUCCESS:
-      let filteredItems = state.items;
-      delete filteredItems[action.payload.gif.id];
-
-      // return
-
-    case GET_GIFS_FAILURE:
-    case LIKE_FAILURE:
-      // return
-
-    default:
-      return state;
-  }
 }
 
 function convertGiphyResponse(gifs){

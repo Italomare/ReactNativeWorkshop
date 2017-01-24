@@ -4,11 +4,18 @@ import {Actions} from 'react-native-router-flux';
 
 import CategoriesList from '../components/gifs/CategoriesList';
 
+/**
+ * Step 3:
+ * - Add onSelect event handler and pass handleSelection compoent method to it
+ * - Add handleSelection component method
+ * - Set bind(this) to handleSelection
+ */
+
 class CategoriesContainer extends Component{
 
   constructor(props){
     super(props);
-      // 3. Set bind(this) to handleSelection
+
   }
 
   render(){
@@ -25,13 +32,10 @@ class CategoriesContainer extends Component{
             {title: 'scream queens', url:'https://i.giphy.com/3oz8xXZ9n58kl59uSc.gif'},
             {title: 'dance', url:'https://i.giphy.com/3o6oziEt5VUgsuunxS.gif'},
           ]}
-          {/* 1. Add onSelect event handler and pass handleSelection compoent method to it */}
         />
       </View>
     )
   }
-
-  // 2. Add handleSelection compoent method
 
 }
 

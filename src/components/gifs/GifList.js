@@ -3,23 +3,28 @@ import {View, ScrollView, StyleSheet} from 'react-native';
 
 import Gif from './Gif';
 
+/**
+ * Step 3:
+ * - Setup contructor
+ * - Create ScrollView to get the gifs
+ * - Call getgifs component method inside of ScrollView component
+ * - Add getGifs component method
+ * - Map over gifs object and pass gifUri to Gif
+ * - Set bind(this) to getGifs
+ */
+
+
+
 class GifList extends Component{
 
   render(){
 
-    // 4. Setup contructor
-    // 5. Set bind(this) to getGifs
-
     return(
       <View style={styles.container}>
-        {/*
-          1. Create ScrollView
-          2. Call getGifs component method inside of ScrollView component
-           */}
+
       </View>
     )
   }
-  // 3. Add getGifs component method
 }
 
 const styles = StyleSheet.create({

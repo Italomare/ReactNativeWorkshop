@@ -5,16 +5,23 @@ import Colors from '../../styles/colors';
 
 import Gif from './Gif';
 
+/**
+ * Step 3:
+ * - Pass in gif, onLike, onDislike on props
+ * - Create view for gif container
+ * - Use Gif to display gif
+ * - Create button container for like and dislike buttons
+ * - Create button with onPress event handler using onLike passing in gif id
+ * - Create button with onPress event handler using onDisLike passing in gif id
+ */
+
 class SelectionCarousel extends Component{
 
   render(){
 
     return(
       <View style={styles.container}>
-        { /*
-        1. Create gifContainer with gif(props)
-        2. Create buttons with event handlers for likes and dislikes
-         */ }
+
       </View>
     )
   }

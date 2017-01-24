@@ -3,24 +3,27 @@ import {View, ScrollView, StyleSheet} from 'react-native';
 
 import Category from './Category';
 
+/**
+ * Step 3:
+ * - Setup contructor
+ * - Create ScrollView to get the categories
+ * - Call getCategories component method inside of ScrollView component
+ * - Add getCategories component method
+ * - Map over categories and pass category and onSelect to Category
+ * - Set bind(this) to getCategories
+ */
+
 class CategoriesList extends Component{
 
   render(){
 
-    // 4. Setup contructor
-    // 5. Set bind(this) to getCategories
-
     return(
       <View style={styles.container}>
-        {/*
-          1. Create ScrollView to get the categories
-          2. Call getCategories component method inside of ScrollView component
-          */}
+
       </View>
     )
   }
 
-  // 3. Add getCategories component method
 }
 
 const styles = StyleSheet.create({

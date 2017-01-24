@@ -2,6 +2,13 @@ import React, {Component, PropTypes} from 'react';
 import {View, Text, StyleSheet, TouchableHighlight, Image} from 'react-native';
 import Colors from '../../styles/colors';
 
+/**
+ * Step 3:
+ * - Create TouchableHighlight with onPress event handler using onSelct function and category on props
+ * - Create Image with the category uri
+ * - Create Text with category text 
+ */
+
 class Category extends Component{
 
   render(){
@@ -10,10 +17,7 @@ class Category extends Component{
 
     return(
      <View style={styles.container}>
-       {/*
-         1. Create TouchableHighlight
-         2. Add onPress event handler for selecting a category
-       */}
+
     </View>
     )
   }

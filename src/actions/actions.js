@@ -45,6 +45,7 @@ https://media.giphy.com/media/26FLeFK9dfmg6xq12/source.gif
 */
 
 /**
+* Step 4:
 * G E T  G I F S  by L I K E
 * - Create getLikes function with temporary gifs
 * - Dispatch getLikesRequested and getLikesSuccess within getLikes function
@@ -117,6 +118,7 @@ export function dislike(gif) {
 };
 
 /**
+ * Step 4:
  * G E T  G I F S  by C A T E G O R Y
  * - Create getGifs function with a hard coded data object
  */

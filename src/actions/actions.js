@@ -19,6 +19,16 @@ export const GET_GIFS_FAILURE = 'GET_GIFS_FAILURE';
 export const SET_CATEGORY = 'SET_CATEGORY';
 
 /**
+* G I F S *
+https://i.giphy.com/xThuWg7lusylvpAVu8.gif
+https://i.giphy.com/l2YWeYNrD6P5nCiCA.gif
+https://i.giphy.com/xTk9ZZCndSIbxjRO8w.gif
+https://media.giphy.com/media/26FLeFK9dfmg6xq12/source.gif
+https://media.giphy.com/media/26FLeFK9dfmg6xq12/source.gif
+*/
+
+
+/**
  * Step 4:
  * L O G I N
  * - Create login function
@@ -26,21 +36,7 @@ export const SET_CATEGORY = 'SET_CATEGORY';
  * - Create loginSuccess function
  * - Create loginFailure function
  * - Dispatch login and loginSuccess within login function
- ******************************************
- * G E T  G I F S  by L I K E
- * - Create getLikes function with temporary gifs
- * - Dispatch getLikesRequested and getLikesSuccess within getLikes function
- ******************************************
- * G E T  G I F S  by C A T E G O R Y
- * - Create getGifs function with a hard coded data object
- ******************************************
- * G I F S ********************************
- https://i.giphy.com/xThuWg7lusylvpAVu8.gif
- https://i.giphy.com/l2YWeYNrD6P5nCiCA.gif
- https://i.giphy.com/xTk9ZZCndSIbxjRO8w.gif
- https://media.giphy.com/media/26FLeFK9dfmg6xq12/source.gif
- https://media.giphy.com/media/26FLeFK9dfmg6xq12/source.gif
- */
+
 
 /**
 * Login
@@ -48,7 +44,11 @@ export const SET_CATEGORY = 'SET_CATEGORY';
 * @param username
 */
 
-
+/**
+* G E T  G I F S  by L I K E
+* - Create getLikes function with temporary gifs
+* - Dispatch getLikesRequested and getLikesSuccess within getLikes function
+*/
 
 /**
 * Get Gifs by Likes
@@ -116,12 +116,17 @@ export function dislike(gif) {
   }
 };
 
+/**
+ * G E T  G I F S  by C A T E G O R Y
+ * - Create getGifs function with a hard coded data object
+ */
 
 /**
  * Get Gifs by Category
  *
  * @param category
  */
+
 
  export function getGifsRequested() {
    return {

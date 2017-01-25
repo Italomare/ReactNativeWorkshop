@@ -11,8 +11,7 @@ import {
 
 /**
  * Step:4
- * Setup switch statement
- *
+ * Add action handlers inside switch statement
  */
 
 export default function GifsReducer(state = {category: null, items: {}, isLoading: false, error: null}, action) {

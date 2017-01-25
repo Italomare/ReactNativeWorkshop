@@ -35,7 +35,7 @@ https://media.giphy.com/media/26FLeFK9dfmg6xq12/source.gif
  * - Create loginRequested function
  * - Create loginSuccess function
  * - Create loginFailure function
- * - Dispatch login and loginSuccess within login function
+ * - Dispatch loginRequested and loginSuccess within login function
 
 
 /**

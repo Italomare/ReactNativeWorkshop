@@ -1,4 +1,4 @@
-/**
+ /**
  * React Native Workshop App
  */
 import React, { Component } from 'react';

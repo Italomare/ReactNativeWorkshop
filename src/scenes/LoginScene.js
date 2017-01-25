@@ -1,7 +1,13 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-import Button from 'react-native-button';
-import { Actions } from 'react-native-router-flux';
+import {View, StyleSheet} from 'react-native';
+
+import LoginContainer from '../containers/LoginContainer';
+
+/**
+ * Step 3:
+ * - Delete Text and Button component along with their styles
+ * - Pass LoginContainer to view
+ */
 
 class LoginScene extends Component{
 

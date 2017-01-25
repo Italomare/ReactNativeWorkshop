@@ -1,26 +1,23 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
+
+import GifSelectionContainer from '../containers/GifSelectionContainer';
 
 class GifSelectionScene extends Component{
 
   render(){
     return(
       <View style={styles.container}>
-        <Text style={styles.text}>Gif Selection Scene</Text>
+        <GifSelectionContainer />
       </View>
     )
   }
-
 }
 
 const styles = StyleSheet.create({
   container:{
     flex:1,
-    justifyContent: 'center',
-    backgroundColor: '#F0F3BD'
-  },
-  text:{
-    color:'#05668D'
+    justifyContent: 'center'
   }
 })
 

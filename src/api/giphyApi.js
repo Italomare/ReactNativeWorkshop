@@ -1,4 +1,4 @@
-import 'whatwg-fetch'; //why a polyfill? well Safari doesn't yet support `fetch` that is why :p
+import 'whatwg-fetch';
 const API_KEY = 'dc6zaTOxFJmzC';
 
 

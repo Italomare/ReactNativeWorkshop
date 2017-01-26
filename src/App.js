@@ -1,6 +1,15 @@
 import React, {Component} from 'react';
 import {View, Text} from 'react-native';
 import {Scene, Router, TabBar, Icon} from 'react-native-router-flux';
+import { Provider } from 'react-redux';
+
+import configureStore from './store/store'
+const store = configureStore({});
+
+/**
+ * Step:4
+ * - Wrap Router in Provider and pass in store
+ */
 
 /*
  * Containers (Views)

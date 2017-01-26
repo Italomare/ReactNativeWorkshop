@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, TextInput} from 'react-native';
-import { Actions } from 'react-native-router-flux';
+import { Actions as RouteActions } from 'react-native-router-flux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import LoginForm from '../components/user/LoginForm';
 
@@ -22,7 +24,7 @@ class LoginContainer extends Component{
   handleSubmit(username) {
 
     console.log('Submitted username: ', username);
-    
+
     //Navigate to tabbar key
     Actions.tabbar();
 
@@ -36,4 +38,10 @@ const styles = StyleSheet.create({
   }
 })
 
-export default LoginContainer;
+function mapDispatchToProps(dispatch) {
+  return {
+    Actions: bindActionCreators(ActionCreators, dispatch),
+  };
+}
+
+export default connect(null, mapDispatchToProps)(LoginContainer);

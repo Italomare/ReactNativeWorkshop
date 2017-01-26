@@ -1,10 +1,25 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import * as ActionCreators from '../actions/actions';
 
 import SelectionCarousel from '../components/gifs/SelectionCarousel';
 
+/**
+ * Step 4:
+ * Setup lifecycle method when we reach the end of our gif list
+ *
+ * Setup Actions for likes
+ * Setup Actions for dislikes
+ * mapStateToProps function
+ * mapDispatchToProps function
+ * connect function
+ */
+
 class GifSelectionContainer extends Component{
-  
+
   constructor(props) {
     super(props);
 
@@ -25,13 +40,13 @@ class GifSelectionContainer extends Component{
   }
 
   render(){
-    
+
     let { gifs, active } = this.state;
 
     return(
       <View style={styles.container}>
-        <SelectionCarousel 
-          gif={gifs[active]} 
+        <SelectionCarousel
+          gif={gifs[active]}
           onLike={this.handleLike}
           onDislike={this.handleDislike}
         />

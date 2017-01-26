@@ -19,16 +19,6 @@ export const GET_GIFS_FAILURE = 'GET_GIFS_FAILURE';
 export const SET_CATEGORY = 'SET_CATEGORY';
 
 /**
-* G I F S *
-https://i.giphy.com/xThuWg7lusylvpAVu8.gif
-https://i.giphy.com/l2YWeYNrD6P5nCiCA.gif
-https://i.giphy.com/xTk9ZZCndSIbxjRO8w.gif
-https://media.giphy.com/media/26FLeFK9dfmg6xq12/source.gif
-https://media.giphy.com/media/26FLeFK9dfmg6xq12/source.gif
-*/
-
-
-/**
  * Step 4:
  * L O G I N
  * - Create login function
@@ -56,6 +46,24 @@ https://media.giphy.com/media/26FLeFK9dfmg6xq12/source.gif
 *
 * @param category
 */
+export function getLikes() {
+  return (dispatch) => {
+
+    /**
+     * Temporary Gifs
+     */
+    let gifs = {
+      1: {id: 1, uri: 'https://i.giphy.com/xThuWg7lusylvpAVu8.gif'},
+      2: {id: 2, uri: 'https://i.giphy.com/l2YWeYNrD6P5nCiCA.gif'},
+      3: {id: 3, uri: 'https://i.giphy.com/xTk9ZZCndSIbxjRO8w.gif'},
+      4: {id: 4, uri: 'https://media.giphy.com/media/26FLeFK9dfmg6xq12/source.gif'},
+      5: {id: 5, uri: 'https://i.giphy.com/3ohfFn9vOub5BsZZ0k.gif'}
+    };
+
+    // Dispatch functions
+
+  };
+};
 
 export function getLikesRequested() {
   return {
@@ -120,7 +128,7 @@ export function dislike(gif) {
 /**
  * Step 4:
  * G E T  G I F S  by C A T E G O R Y
- * - Create getGifs function with a hard coded data object
+ * - Dispatch getGifsRequested and getGifsSuccess
  */
 
 /**
@@ -129,6 +137,42 @@ export function dislike(gif) {
  * @param category
  */
 
+ export function getGifs(category) {
+   return (dispatch) => {
+
+     let giphyResponse = {
+       data: [
+         {
+           id: 0,
+           images: {
+             fixed_width: {url: 'http://i.giphy.com/xThuWg7lusylvpAVu8.gif'}
+           }
+         },
+         {
+           id: 1,
+           images: {
+             fixed_width: {url: 'http://i.giphy.com/l2YWeYNrD6P5nCiCA.gif'}
+           }
+         },
+         {
+           id: 2,
+           images: {
+             fixed_width: {url: 'http://i.giphy.com/xTk9ZZCndSIbxjRO8w.gif'}
+           }
+         },
+         {
+           id: 3,
+           images: {
+             fixed_width: {url: 'http://i.giphy.com/3ohfFn9vOub5BsZZ0k.gif'}
+           }
+         }
+       ]
+     };
+
+     // Dispatch functions
+
+   };
+ };
 
  export function getGifsRequested() {
    return {

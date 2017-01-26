@@ -1,7 +1,19 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import * as ActionCreators from '../actions/actions';
 
 import GifList from '../components/gifs/GifList';
+
+/**
+ * Step:4
+ * Delete this.state object (state is being handled with Redux)
+ * Create llifecycle method to recieve likes before the view is rendered
+ * Setup variable for if there is a user to return gifs or an empty object 
+ * Use that variable to get the users gifs
+ */
 
 class ProfileContainer extends Component{
 
@@ -37,4 +49,14 @@ const styles = StyleSheet.create({
   }
 })
 
-export default ProfileContainer;
+function mapStateToProps(state) {
+  return { user: state.user };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    Actions: bindActionCreators(ActionCreators, dispatch),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProfileContainer);

@@ -1,8 +1,17 @@
 import React, {Component} from 'react';
 import {View, StyleSheet} from 'react-native';
-import {Actions} from 'react-native-router-flux';
+import {Actions as RouteActions} from 'react-native-router-flux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import * as ActionCreators from '../actions/actions';
 
 import CategoriesList from '../components/gifs/CategoriesList';
+
+/**
+ * Step:4
+ * Setup actions inside component method to handle setting the category and to get gifs
+ */
 
 class CategoriesContainer extends Component{
 
@@ -46,4 +55,10 @@ const styles = StyleSheet.create({
   }
 })
 
-export default CategoriesContainer;
+function mapDispatchToProps(dispatch) {
+  return {
+    Actions: bindActionCreators(ActionCreators, dispatch),
+  };
+}
+
+export default connect(null, mapDispatchToProps)(CategoriesContainer);

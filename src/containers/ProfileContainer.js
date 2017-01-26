@@ -11,8 +11,8 @@ import GifList from '../components/gifs/GifList';
  * Step:4
  * Delete this.state object (state is being handled with Redux)
  * Create llifecycle method to recieve likes before the view is rendered
- * Setup variable for if there is a user to return gifs or an empty object 
- * Use that variable to get the users gifs
+ * Setup variable for if there is a user to return gifs or an empty object
+ * Use that variable to get the gif to display if there isn't any gifs return false
  */
 
 class ProfileContainer extends Component{

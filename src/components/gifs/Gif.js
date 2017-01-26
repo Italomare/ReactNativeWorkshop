@@ -5,7 +5,6 @@ import {View, Text, StyleSheet, Image} from 'react-native';
  * Step 3:
  * - Get gif uri on props
  * - Create Image with the gif uri
- * - Style gif
  */
 
 class Gif extends Component{
@@ -26,6 +25,10 @@ const styles = StyleSheet.create({
     flex:1,
     justifyContent:'center'
   },
+  gif:{
+    width:300,
+    height:400
+  }
 
 })
 

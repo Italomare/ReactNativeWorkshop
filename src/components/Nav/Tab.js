@@ -7,10 +7,10 @@ import {StyleSheet, Text, View, Image} from 'react-native'
 const Tab = ({selected, title}) => {
 
   let defaultStyles = {
-    color: selected ? '#19e3c6' :'black',
+    color: selected ? '#FFCA2E' :'black',
     alignItems: 'flex-start',
     fontSize: 12,
-    marginBottom: -6, 
+    marginBottom: -6,
     marginLeft: -5
   };
 

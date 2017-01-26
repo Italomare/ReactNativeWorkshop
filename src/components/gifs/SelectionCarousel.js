@@ -17,10 +17,10 @@ class SelectionCarousel extends Component{
           <Gif gifUri={gif.uri}/>
         </View>
         <View style={styles.buttonContainer}>
-          <Button onPress={() => onLike(gif.id)} style={styles.dislikeButton}>
+          <Button onPress={() => onDisike(gif.id)} style={styles.dislikeButton}>
             Dislike
           </Button>
-          <Button onPress={() => onDislike(gif.id)} style={styles.likeButton}>
+          <Button onPress={() => onLike(gif.id)} style={styles.likeButton}>
             Like
           </Button>
         </View>

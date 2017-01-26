@@ -1,3 +1,5 @@
+import * as FirebaseApi from '../api/firebaseApi';
+import * as giphyApi from '../api/giphyApi';
 
 export const LOGIN_REQUESTED = 'LOGIN_REQUESTED'
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
@@ -19,7 +21,10 @@ export const GET_GIFS_FAILURE = 'GET_GIFS_FAILURE';
 
 export const SET_CATEGORY = 'SET_CATEGORY';
 
-import * as giphyApi from '../api/giphyApi';
+/**
+ * Step: 6
+ * Connect get gifs by likes to firebae API
+ */
 
 /**
  * Login

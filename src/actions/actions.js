@@ -1,3 +1,4 @@
+import * as giphyApi from '../api/giphyApi';
 
 export const LOGIN_REQUESTED = 'LOGIN_REQUESTED';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
@@ -18,6 +19,11 @@ export const GET_GIFS_SUCCESS = 'GET_GIFS_SUCCESS';
 export const GET_GIFS_FAILURE = 'GET_GIFS_FAILURE';
 
 export const SET_CATEGORY = 'SET_CATEGORY';
+
+/**
+ * Step: 5
+ * - Implement Giphy API to get gifs
+ */
 
 /**
  * Login

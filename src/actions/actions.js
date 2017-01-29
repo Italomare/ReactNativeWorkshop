@@ -1,17 +1,18 @@
+import * as giphyApi from '../api/giphyApi';
 
-export const LOGIN_REQUESTED = 'LOGIN_REQUESTED'
-export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
-export const LOGIN_FAILURE = 'LOGIN_FAILURE'
+export const LOGIN_REQUESTED = 'LOGIN_REQUESTED';
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGIN_FAILURE = 'LOGIN_FAILURE';
+
+export const GET_LIKES_REQUESTED = 'GET_LIKES_REQUESTED';
+export const GET_LIKES_SUCCESS = 'GET_LIKES_SUCCESS';
+export const GET_LIKES_FAILURE = 'GET_LIKES_FAILURE';
 
 export const LIKE_REQUESTED = 'LIKE_REQUESTED';
 export const LIKE_SUCCESS = 'LIKE_SUCCESS';
 export const LIKE_FAILURE = 'LIKE_FAILURE';
 
 export const DISLIKE = 'DISLIKE';
-
-export const GET_LIKES_REQUESTED = 'GET_LIKES_REQUESTED';
-export const GET_LIKES_SUCCESS = 'GET_LIKES_SUCCESS';
-export const GET_LIKES_FAILURE = 'GET_LIKES_FAILURE';
 
 export const GET_GIFS_REQUESTED = 'GET_GIFS_REQUESTED';
 export const GET_GIFS_SUCCESS = 'GET_GIFS_SUCCESS';
@@ -20,15 +21,20 @@ export const GET_GIFS_FAILURE = 'GET_GIFS_FAILURE';
 export const SET_CATEGORY = 'SET_CATEGORY';
 
 /**
- * Login 
+ * Step: 5
+ * - Implement Giphy API to get gifs
+ */
+
+/**
+ * Login
  *
- * @param username 
+ * @param username
  */
 export function login(username) {
   return (dispatch) => {
 
-    dispatch(loginRequested());    
-    dispatch(loginSuccess(username));    
+    dispatch(loginRequested());
+    dispatch(loginSuccess(username));
 
   };
 };
@@ -54,56 +60,9 @@ export function loginFailure(error) {
 }
 
 /**
- * Like a gif 
+ * Get Gifs by Category
  *
- * @param gifId 
- * @param uri 
- */
-export function like(gif) {
-  return (dispatch) => {
-
-    dispatch(likeRequested());    
-    dispatch(likeSuccess(gif));    
-
-  };
-};
-
-export function likeRequested() {
-  return {
-    type: LIKE_REQUESTED
-  };
-};
-
-export function likeSuccess(gif) {
-  return {
-    type: LIKE_SUCCESS,
-    payload: { gif }
-  };
-};
-
-export function likeFailure(error) {
-  return{
-    type: LIKE_FAILURE,
-    payload: { error }
-  }
-}
-
-/**
- * Dislike a gif 
- *
- * @param gifId 
- */
-export function dislike(gif) {
-  return{
-    type: DISLIKE,
-    payload: { gif }
-  }
-};
-
-/**
- * Get Gifs by Category 
- *
- * @param category 
+ * @param category
  */
 export function getLikes() {
   return (dispatch) => {
@@ -119,8 +78,8 @@ export function getLikes() {
       5: {id: 5, uri: 'https://i.giphy.com/3ohfFn9vOub5BsZZ0k.gif'}
     };
 
-    dispatch(getLikesRequested());    
-    dispatch(getLikesSuccess(gifs));    
+    dispatch(getLikesRequested());
+    dispatch(getLikesSuccess(gifs));
 
   };
 };
@@ -146,34 +105,81 @@ export function getLikesFailure(error) {
 }
 
 /**
- * Get Gifs by Category 
+ * Like a gif
  *
- * @param category 
+ * @param gifId
+ * @param uri
+ */
+export function like(gif) {
+  return (dispatch) => {
+
+    dispatch(likeRequested());
+    dispatch(likeSuccess(gif));
+
+  };
+};
+
+export function likeRequested() {
+  return {
+    type: LIKE_REQUESTED
+  };
+};
+
+export function likeSuccess(gif) {
+  return {
+    type: LIKE_SUCCESS,
+    payload: { gif }
+  };
+};
+
+export function likeFailure(error) {
+  return{
+    type: LIKE_FAILURE,
+    payload: { error }
+  }
+}
+
+/**
+ * Dislike a gif
+ *
+ * @param gifId
+ */
+export function dislike(gif) {
+  return{
+    type: DISLIKE,
+    payload: { gif }
+  }
+};
+
+/**
+ * Get Gifs by Category
+ *
+ * @param category
  */
 export function getGifs(category) {
   return (dispatch) => {
 
     let giphyResponse = {
       data: [
-        { 
+        {
           id: 0,
           images: {
             fixed_width: {url: 'http://i.giphy.com/xThuWg7lusylvpAVu8.gif'}
           }
         },
-        { 
+        {
           id: 1,
           images: {
             fixed_width: {url: 'http://i.giphy.com/l2YWeYNrD6P5nCiCA.gif'}
           }
         },
-        { 
+        {
           id: 2,
           images: {
             fixed_width: {url: 'http://i.giphy.com/xTk9ZZCndSIbxjRO8w.gif'}
           }
         },
-        { 
+        {
           id: 3,
           images: {
             fixed_width: {url: 'http://i.giphy.com/3ohfFn9vOub5BsZZ0k.gif'}
@@ -182,8 +188,8 @@ export function getGifs(category) {
       ]
     };
 
-    dispatch(getGifsRequested());    
-    dispatch(getGifsSuccess(giphyResponse.data));    
+    dispatch(getGifsRequested());
+    dispatch(getGifsSuccess(giphyResponse.data));
 
   };
 };

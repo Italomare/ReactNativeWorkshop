@@ -5,11 +5,11 @@ class Gif extends Component{
 
   render(){
 
-    let { gifUri } = this.props; 
+    let { gifUri } = this.props;
 
     return(
       <View style={styles.container}>
-        <Image source={{uri: gifUri}} style={styles.gif} /> 
+        <Image source={{uri: gifUri}} style={styles.gif} />
       </View>
     )
   }

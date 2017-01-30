@@ -10,7 +10,7 @@ import CategoriesList from '../components/gifs/CategoriesList';
 
 /**
  * Step:4
- * Setup actions inside component method to handle setting the category and to get gifs
+ * - Setup actions inside component method to handle setting the category and to get gifs
  */
 
 class CategoriesContainer extends Component{

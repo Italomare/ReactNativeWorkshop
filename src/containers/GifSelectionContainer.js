@@ -9,13 +9,12 @@ import SelectionCarousel from '../components/gifs/SelectionCarousel';
 
 /**
  * Step 4:
- * Setup lifecycle method when we reach the end of our gif list
- *
- * Setup Actions for likes
- * Setup Actions for dislikes
- * mapStateToProps function
- * mapDispatchToProps function
- * connect function
+ * - Setup lifecycle method when we reach the end of our gif list
+ * - Setup Actions for likes
+ * - Setup Actions for dislikes
+ * - mapStateToProps function
+ * - mapDispatchToProps function
+ * - connect function
  */
 
 class GifSelectionContainer extends Component{

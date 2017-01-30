@@ -37,7 +37,6 @@ export const SET_CATEGORY = 'SET_CATEGORY';
 /**
 * Step 4:
 * G E T  G I F S  by L I K E
-* - Create getLikes function with temporary gifs
 * - Dispatch getLikesRequested and getLikesSuccess within getLikes function
 */
 

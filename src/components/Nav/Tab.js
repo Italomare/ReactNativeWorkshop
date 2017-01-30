@@ -1,5 +1,5 @@
-import React, { Component, PropTypes} from 'react'
-import {StyleSheet, Text, View, Image} from 'react-native'
+import React, { Component } from 'react'
+import {Text} from 'react-native'
 
 /**
  * Navigation Tab
@@ -10,7 +10,7 @@ const Tab = ({selected, title}) => {
     color: selected ? '#19e3c6' :'black',
     alignItems: 'flex-start',
     fontSize: 12,
-    marginBottom: -6, 
+    marginBottom: -6,
     marginLeft: -5
   };
 

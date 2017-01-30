@@ -9,10 +9,14 @@ import GifList from '../components/gifs/GifList';
 
 /**
  * Step:4
- * Delete this.state object (state is being handled with Redux)
- * Create llifecycle method to recieve likes before the view is rendered
- * Setup variable for if there is a user to return gifs or an empty object
- * Use that variable to get the gif to display if there isn't any gifs return false
+ * - Delete this.state object (state is being handled with Redux)
+ * - Create llifecycle method to recieve likes before the view is rendered
+ * - Setup variable for if there is a user to return gifs or an empty object
+ * - Use that variable to get the gif to display if there isn't any gifs return false
+ * - mapStateToProps function
+ * - return new state of user
+ * - mapDispatchToProps function
+ * - connect function
  */
 
 class ProfileContainer extends Component{
@@ -49,14 +53,4 @@ const styles = StyleSheet.create({
   }
 })
 
-function mapStateToProps(state) {
-  return { user: state.user };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    Actions: bindActionCreators(ActionCreators, dispatch),
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(ProfileContainer);
+export default ProfileContainer;

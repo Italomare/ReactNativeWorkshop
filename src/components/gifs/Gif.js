@@ -1,20 +1,15 @@
 import React, {Component, PropTypes} from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 
-/**
- * Step 3:
- * - Get gif uri on props
- * - Create Image with the gif uri
- */
-
 class Gif extends Component{
 
   render(){
 
+    let { gifUri } = this.props;
 
     return(
       <View style={styles.container}>
-
+        <Image soure={{ uri: gifUri }} style={styles.gif} />
       </View>
     )
   }

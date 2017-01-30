@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
 import {Scene, Router, TabBar, Icon} from 'react-native-router-flux';
 
 /*
- * Containers (Views) 
+ * Containers (Views)
  */
  import WelcomeScene from './scenes/WelcomeScene'
  import LoginScene from './scenes/LoginScene'

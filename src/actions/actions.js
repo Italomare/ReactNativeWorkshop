@@ -1,3 +1,5 @@
+import * as FirebaseApi from '../api/firebaseApi';
+import * as giphyApi from '../api/giphyApi';
 
 export const LOGIN_REQUESTED = 'LOGIN_REQUESTED'
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
@@ -19,7 +21,12 @@ export const GET_GIFS_FAILURE = 'GET_GIFS_FAILURE';
 
 export const SET_CATEGORY = 'SET_CATEGORY';
 
-import * as giphyApi from '../api/giphyApi';
+/**
+ * Step: 6
+ * - Connect Login to firebase API
+ * - Connect Likes to firebase API
+ * - Connect Get Gifs by Like to Firebase API
+ */
 
 /**
  * Login
@@ -30,6 +37,9 @@ export function login(username) {
   return (dispatch) => {
 
     dispatch(loginRequested());
+
+    // Login connection to Firebase API
+
     dispatch(loginSuccess(username));
 
   };
@@ -65,6 +75,9 @@ export function like(gif) {
   return (dispatch) => {
 
     dispatch(likeRequested());
+
+    // Likes connection to Firebase API
+
     dispatch(likeSuccess(gif));
 
   };
@@ -103,7 +116,7 @@ export function dislike(gif) {
 };
 
 /**
- * Get Gifs by Category
+ * Get Gifs by Likes
  *
  * @param category
  */
@@ -113,6 +126,8 @@ export function getLikes() {
     /**
      * Temporary Gifs
      */
+
+   // Gifs by Likes connection to Firebase API
     let gifs = {
       1: {id: 1, uri: 'https://i.giphy.com/xThuWg7lusylvpAVu8.gif'},
       2: {id: 2, uri: 'https://i.giphy.com/l2YWeYNrD6P5nCiCA.gif'},

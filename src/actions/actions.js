@@ -22,7 +22,7 @@ export const SET_CATEGORY = 'SET_CATEGORY';
 
 /**
  * Step: 5
- * - Implement Giphy API to get gifs
+ * - Implement Giphy API to get gifs by Category
  */
 
 /**

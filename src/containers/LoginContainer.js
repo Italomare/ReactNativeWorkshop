@@ -3,6 +3,7 @@ import {View, Text, StyleSheet, TextInput} from 'react-native';
 import { Actions as RouteActions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import * as ActionCreators from '../actions/actions';
 
 import LoginForm from '../components/user/LoginForm';
 

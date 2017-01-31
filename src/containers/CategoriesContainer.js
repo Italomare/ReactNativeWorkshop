@@ -12,6 +12,8 @@ import CategoriesList from '../components/gifs/CategoriesList';
  * Step:4
  * - Setup actions inside component method to handle setting the
      category and to get gifs
+ * - mapDispatchToProps
+ * - connect function
  */
 
 class CategoriesContainer extends Component{
@@ -44,7 +46,7 @@ class CategoriesContainer extends Component{
   handleSelection(category) {
     console.log('handle category selection: ', category);
     console.log('handleSelection actions: ', Actions);
-    Actions.gifs();
+    RouteActions.gifs();
   }
 
 }
@@ -56,10 +58,4 @@ const styles = StyleSheet.create({
   }
 })
 
-function mapDispatchToProps(dispatch) {
-  return {
-    Actions: bindActionCreators(ActionCreators, dispatch),
-  };
-}
-
-export default connect(null, mapDispatchToProps)(CategoriesContainer);
+export default CategoriesContainer;

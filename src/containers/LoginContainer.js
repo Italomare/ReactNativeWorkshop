@@ -24,10 +24,8 @@ class LoginContainer extends Component{
 
   handleSubmit(username) {
 
-    console.log('Submitted username: ', username);
-
     //Navigate to tabbar key
-    Actions.tabbar();
+    RouteActions.tabbar();
 
   }
 

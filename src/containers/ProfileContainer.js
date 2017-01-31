@@ -10,7 +10,7 @@ import GifList from '../components/gifs/GifList';
 /**
  * Step:4
  * - Delete this.state object (state is being handled with Redux)
- * - Create llifecycle method to recieve likes before the view is rendered
+ * - Create lifecycle method to recieve likes before the view is rendered
  * - Setup variable for if there is a user to return gifs or an empty object
  * - Use that variable to get the gif to display if there isn't any gifs return false
  * - mapStateToProps function
@@ -53,4 +53,14 @@ const styles = StyleSheet.create({
   }
 })
 
-export default ProfileContainer;
+function mapStateToProps(state) {
+  return { user: state.user };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    Actions: bindActionCreators(ActionCreators, dispatch),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProfileContainer);

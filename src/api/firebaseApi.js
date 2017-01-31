@@ -9,13 +9,6 @@ const firebaseConfig = {
   messagingSenderId: "659877549359"
 };
 
-/**
- * Step: 6
- * - Create a user based on the username
- * - Retrieve users gif likes based on username
- * - Like a gif for a user
- */
-
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 
@@ -24,18 +17,31 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
  *
  * @param username
  */
+export function createUser(username) {
+  return firebaseApp.database().ref(`users/${username}`).set({
+    username,
+    likes: {}
+  });
+}
 
-
- /**
+/**
  * Retrieve users gif likes based on username
  *
  * @param username
  */
+export function getLikes(username){
+  return firebaseApp.database().ref(`users/${username}/likes`).once('value')
+    .then((snapshot) => {
+      return snapshot.val();
+    });
+}
 
-
- /**
-  * Like a gif for a user
-  *
-  * @param username
-  * @param gif
-  */
+/**
+ * Like a gif for a user
+ *
+ * @param username
+ * @param gif
+ */
+export function like(username, gif){
+  return firebaseApp.database().ref(`users/${username}/likes/${gif.id}`).set(gif);
+}

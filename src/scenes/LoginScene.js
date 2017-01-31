@@ -9,4 +9,6 @@ import { Actions } from 'react-native-router-flux';
  * Step 2:
  * - Define Login Scene
  * - Add button to scene that navigates to the tabbar via dynamic routing (Actions)
+ * - Style Component
+ * - export 
  */

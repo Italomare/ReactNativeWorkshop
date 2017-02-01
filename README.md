@@ -24,15 +24,15 @@ Are you falling behind? Don't worry, we have you covered. At each stage of the w
 What is a branch? A branch is an independent snapshot of the code.
 
 ```
+git stash
 git checkout <branch-name>
 ```
 
 **Branches:**
 
-* **step-2** - Project setup completed.
-* **step-3** - Routing and view animations completed.
-* **step-4** - Containers, components, and styles completed.
-* **step-5** - Redux implementation completed.
-* **step-6** - Giphy API integration completed.
-* **step-7** - Firebase integration completed.
-* **completed** - Finished workshop application.
+* **step-2** - Routing
+* **step-3** - Containers, Components & Styles.
+* **step-4** - Redux
+* **step-5** - Giphy API integration 
+* **step-6** - Firebase API integration
+* **step-7** - Completed workshop

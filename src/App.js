@@ -18,7 +18,7 @@ const store = configureStore({});
 /*
  * TabBar Icons
  */
-import TabIcon from './components/Nav/Tab';
+import TabIcon from './components/nav/Tab';
 
 const App = () => {
   return(

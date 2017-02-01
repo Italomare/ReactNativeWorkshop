@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text, Image, StyleSheet} from 'react-native';
 import Button from 'react-native-button';
-import { Actions } from 'react-native-router-flux';
+import {Actions as RouteActions} from 'react-native-router-flux';
 import Colors from '../styles/colors';
 
 class WelcomeScene extends Component{
@@ -19,7 +19,7 @@ class WelcomeScene extends Component{
           <Text style={styles.underline}>______</Text>
         </View>
         <View style= { styles.buttonContainer }>
-          <Button onPress={Actions.login} style={styles.button}>get started</Button>
+          <Button onPress={RouteActions.login} style={styles.button}>get started</Button>
         </View>
       </View>
     </Image>

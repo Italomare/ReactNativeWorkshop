@@ -3,7 +3,7 @@ import {View, Text, StyleSheet} from 'react-native';
 import Button from 'react-native-button';
 
 //Actions is provided by the router for dynamic routing
-import { Actions } from 'react-native-router-flux';
+import { Actions as RouteActions} from 'react-native-router-flux';
 
  class WelcomeScene extends Component{
 
@@ -11,7 +11,7 @@ import { Actions } from 'react-native-router-flux';
      return(
        <View style={styles.container}>
          <Text style={styles.text}>Welcome Scene</Text>
-         <Button onPress={Actions.login} style={styles.button}>Login</Button>
+         <Button onPress={RouteActions.login} style={styles.button}>Login</Button>
        </View>
      )
    }

@@ -13,7 +13,7 @@
  * **Step 2** - Type in terminal `git clone git@github.com:zionlabs/ReactNativeWorkshop.git`
 
 * **Run React Native App:**
- * **Step 3** - In the terminal navigate to the directory created in step 3 from the git clone operation.
+ * **Step 3** - Type in terminal `git checkout step-2`
  * **Step 4** - Type in terminal `npm install`
  * **Step 5** - Type in terminal `react-native run-ios`
 
@@ -24,15 +24,15 @@ Are you falling behind? Don't worry, we have you covered. At each stage of the w
 What is a branch? A branch is an independent snapshot of the code.
 
 ```
+git stash
 git checkout <branch-name>
 ```
 
 **Branches:**
 
-* **step-2** - Project setup completed.
-* **step-3** - Routing and view animations completed.
-* **step-4** - Containers, components, and styles completed.
-* **step-5** - Redux implementation completed.
-* **step-6** - Giphy API integration completed.
-* **step-7** - Firebase integration completed.
-* **completed** - Finished workshop application.
+* **step-2** - Routing
+* **step-3** - Containers, Components & Styles.
+* **step-4** - Redux
+* **step-5** - Giphy API integration 
+* **step-6** - Firebase API integration
+* **step-7** - Completed workshop

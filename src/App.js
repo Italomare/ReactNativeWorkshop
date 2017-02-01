@@ -13,7 +13,7 @@ import {Scene, Router, TabBar, Icon} from 'react-native-router-flux';
 /*
  * TabBar Icons
  */
-import TabIcon from './components/nav/Tab';
+import TabIcon from './components/navigation/Tab';
 
 const App = () => {
   return(

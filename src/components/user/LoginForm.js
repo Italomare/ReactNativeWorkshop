@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {View, Text, StyleSheet, TextInput, Image} from 'react-native';
 import Button from 'react-native-button';
-import { Actions } from 'react-native-router-flux';
+import { Actions as RouteActions } from 'react-native-router-flux';
 import Colors from '../../styles/colors';
 
 /**

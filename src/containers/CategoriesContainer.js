@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {View, StyleSheet} from 'react-native';
-import {Actions} from 'react-native-router-flux';
+import {Actions as RouteActions} from 'react-native-router-flux';
 
 import CategoriesList from '../components/gifs/CategoriesList';
 

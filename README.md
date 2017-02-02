@@ -8,11 +8,8 @@
 
 ### Getting Started
 
-* **Clone Repository** 
  * **Step 1** - In the terminal navigate to the folder you want the application to be cloned into. Cloning copies the repository on github to your local computer.
  * **Step 2** - Type in terminal `git clone git@github.com:zionlabs/ReactNativeWorkshop.git`
-
-* **Run React Native App:**
  * **Step 3** - Type in terminal `git checkout step-2`
  * **Step 4** - Type in terminal `npm install`
  * **Step 5** - Type in terminal `react-native run-ios`

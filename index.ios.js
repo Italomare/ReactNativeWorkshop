@@ -6,12 +6,21 @@ import {
   View
 } from 'react-native';
 
+/*
+ * TODO Step 2:
+ *
+ * 1. Import App.js file above using: import App.js from './src/App.js'
+ * 2. Delete ReactNativeWorkshop Component
+ * 3. Delete styles object
+ * 4. Delete ReactNativeWorkshop Component from registerComponent and add the imported 
+ * App Component into the registerComponent 
+ */
+
 export default class ReactNativeWorkshop extends Component {
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          {/*Change text below*/}
           Welcome to React Native Workshop!
         </Text>
         <Text style={styles.instructions}>
@@ -48,10 +57,5 @@ const styles = StyleSheet.create({
   },
 });
 
-/**
- * Step 2:
- * - Remove component and styles above
- * - Import App file
- * - Add App to AppRegister
- */
+
 AppRegistry.registerComponent('ReactNativeWorkshop', () => ReactNativeWorkshop);

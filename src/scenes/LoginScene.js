@@ -6,9 +6,11 @@ import Button from 'react-native-button';
 import { Actions as RouteActions } from 'react-native-router-flux';
 
 /**
- * Step 2:
- * - Define Login Scene
- * - Add button to scene that navigates to the tabbar via dynamic routing (RouteActions)
- * - Style Component
- * - export 
+ * TODO Step 2:
+ *
+ * 1. Create LoginScene Component 
+ * 2. Add Button Component with onPress action handler property
+ * 3. Pass RouteActions.tabbar to onPress on the Button Component
+ * 4. Style Component
+ * 5. Export LoginScene Component 
  */

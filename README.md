@@ -1,6 +1,9 @@
 # Welcome To The React Native Workshop 
 > Presented by [Brandy Bergh](https://twitter.com/msbrandymorgan) and [Josh Pagley](https://twitter.com/jdpagley)
 
+### Resources
+https://github.com/zionlabs/ReactNativeWorkshop/wiki/Resources
+
 ### Installing Dependencies 
 
 * Install Homebrew - [Installation Guide](http://brew.sh/)
@@ -13,9 +16,6 @@
  * **Step 3** - Type in terminal `git checkout step-2`
  * **Step 4** - Type in terminal `npm install`
  * **Step 5** - Type in terminal `react-native run-ios`
-
-### Resources
-https://github.com/zionlabs/ReactNativeWorkshop/wiki/Resources
 
 ### Branch Strategy
 

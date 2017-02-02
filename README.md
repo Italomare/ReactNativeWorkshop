@@ -1,6 +1,20 @@
 # Welcome To The React Native Workshop 
 > Presented by [Brandy Bergh](https://twitter.com/msbrandymorgan) and [Josh Pagley](https://twitter.com/jdpagley)
 
+### Requirements for Workshop:
+
+Homebrew (http://brew.sh/)
+A Github account (https://github.com/)
+Git installed locally (https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+Latest Version of Xcode (https://itunes.apple.com/us/app/xcode/id497799835?mt=12)
+After installing homebrew:
+
+Install Node.js and NPM. Type in terminal: `brew install node`
+Install Watchman. Type in terminal: `brew install watchman`
+Install React Native CLI. Type in terminal: `npm install -g react-native-cli`
+
+Attendies may have to use sudo to install global npm package. If command above fails try typing in terminal: 
+`sudo npm install -g react-native-cli`
 ### Resources
 https://github.com/zionlabs/ReactNativeWorkshop/wiki/Resources
 

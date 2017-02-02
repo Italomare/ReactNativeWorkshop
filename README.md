@@ -14,6 +14,9 @@
  * **Step 4** - Type in terminal `npm install`
  * **Step 5** - Type in terminal `react-native run-ios`
 
+### Resources
+https://github.com/zionlabs/ReactNativeWorkshop/wiki/Resources
+
 ### Branch Strategy
 
 Are you falling behind? Don't worry, we have you covered. At each stage of the workshop we have provided checkpoints (branches) with the completed code. When you checkout a branch you will have everything you need for the next stage of the workshop.

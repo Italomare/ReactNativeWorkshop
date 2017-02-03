@@ -83,10 +83,16 @@ export function getLikesFailure(error) {
 
 /**
 * Like a gif
-*
-* @param gifId
-* @param uri
 */
+export function like(gif) {
+  return (dispatch) => {
+
+    dispatch(likeRequested());
+    dispatch(likeSuccess(gif));
+
+  };
+};
+
 export function likeRequested() {
   return {
     type: LIKE_REQUESTED

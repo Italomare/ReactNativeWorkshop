@@ -3,10 +3,13 @@ import {View, Text, StyleSheet, TouchableHighlight, Image} from 'react-native';
 import Colors from '../../styles/colors';
 
 /**
- * Step 3:
- * - Create TouchableHighlight with onPress event handler using onSelct function and category on props
- * - Create Image with the category uri
- * - Create Text with category text 
+ * TODO Step 3:
+ *
+ * 1. Add TouchableHighlight component with onPress property inside of render method
+ * 2. Add onSelect(category) prop inside of an arrow function to 
+ *    onPress on the TouchableHighlight
+ * 3. Add Image Component with source property set to category.uri inside render method
+ * 4. Add Text component with category.title inside render  method
  */
 
 class Category extends Component{
@@ -15,12 +18,13 @@ class Category extends Component{
 
     let { category, onSelect } = this.props;
 
-    return(
-     <View style={styles.container}>
+    return (
+      <View style={styles.container}>
 
-    </View>
+      </View>
     )
   }
+
 }
 
 const styles = StyleSheet.create({

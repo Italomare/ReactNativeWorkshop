@@ -5,10 +5,14 @@ import {Actions as RouteActions} from 'react-native-router-flux';
 import CategoriesList from '../components/gifs/CategoriesList';
 
 /**
- * Step 3:
- * - Add onSelect event handler and pass handleSelection compoent method to it
- * - Add handleSelection component method
- * - Set bind(this) to handleSelection
+ * TODO Step 3:
+ *
+ * 1. Add onSelect property to CategoriesList component 
+ * 2. Pass handleSelection component method to CategoriesList onSelect property
+ * 3. Add handleSelection component method
+ * 4. Inside of handleSelection dynamically route to gifs using RouteActions.gifs()
+ * 5. Bind the handleSelection component method inside of the constructor,
+ *    i.e. this.handleSelection = this.handleSelection.bind(this)
  */
 
 class CategoriesContainer extends Component{

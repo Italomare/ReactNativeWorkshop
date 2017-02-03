@@ -3,22 +3,13 @@ import {View, Text, StyleSheet} from 'react-native';
 
 import SelectionCarousel from '../components/gifs/SelectionCarousel';
 
-/**
- * Step 3:
- * - Use SelectionCarousel for displaying gifs and buttons
- * - Pass gif into SelectionCarousel to get the active gif
- * - Pass onLike with handleLike component method
- * - Pass onDisLike with handleLike component method
- * - Add handleLike component method and use state to set which one is active
- * - Add handleDislike component method and use state to set which one is active
- * - Bind(this)to handleLike
- * - Bind(this)to handleDislike
- */
-
 class GifSelectionContainer extends Component{
 
   constructor(props) {
     super(props);
+
+    this.handleLike = this.handleLike.bind(this);
+    this.handleDislike = this.handleDislike.bind(this);
 
     this.state = {
       active: 1,
@@ -34,15 +25,26 @@ class GifSelectionContainer extends Component{
   }
 
   render(){
-
+    
     let { gifs, active } = this.state;
 
     return(
       <View style={styles.container}>
-        <SelectionCarousel
+        <SelectionCarousel 
+          gif={gifs[active]} 
+          onLike={this.handleLike}
+          onDislike={this.handleDislike}
         />
       </View>
     )
+  }
+
+  handleLike(id) {
+    this.setState({active: ++id});
+  }
+
+  handleDislike(id) {
+    this.setState({active: ++id});
   }
 
 }

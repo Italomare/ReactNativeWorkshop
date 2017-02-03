@@ -6,13 +6,20 @@ import Colors from '../../styles/colors';
 import Gif from './Gif';
 
 /**
- * Step 3:
- * - Pass in gif, onLike, onDislike on props
- * - Create view for gif container
- * - Use Gif to display gif
- * - Create button container for like and dislike buttons
- * - Create button with onPress event handler using onLike passing in gif id
- * - Create button with onPress event handler using onDisLike passing in gif id
+ * TODO Step 3:
+ *
+ * 1. Destructure gif, onLike, onDislike from this.props inside the render 
+ *    component method.
+ * 2. Add Gif component inside of View with gifContainer styles
+ * 3. Define gifUri prop on Gif component and pass gif.uri from props to it 
+ * 4. Add first Button component with onPress property. This will be the dislike button.
+ *    Pass the onDislike(gif.id) inside of an arrow function to the onPress property.
+ *    i.e. onPress={() => onDislike(gif.id)}
+ * 5. Add styles to dislike button
+ * 6. Add second Button component with onPress property. This will be the like button.
+ *    Pass the onLike(gif.id) inside of an arrow function to the onPress property.
+ *    i.e. onPress={() => onLike(gif.id)}
+ * 7. Add styles to like button
  */
 
 class SelectionCarousel extends Component{
@@ -21,7 +28,12 @@ class SelectionCarousel extends Component{
 
     return(
       <View style={styles.container}>
-
+        <View style={styles.gifContainer}>
+          {/* 1. Add Gif inside this View*/}
+        </View>
+        <View style={styles.buttonContainer}>
+          {/* 3. & 4. Add first and second Button components inside this View*/}
+        </View>
       </View>
     )
   }

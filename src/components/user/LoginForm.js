@@ -5,19 +5,21 @@ import { Actions as RouteActions } from 'react-native-router-flux';
 import Colors from '../../styles/colors';
 
 /**
- * Step 3:
- * - Create LoginForm component
- * - Setup constructor
- * - Set initial state of username
- * - Setup render and return
- * - Create View for component
- * - Create [View for logoContainer, Image, View for text, TextInput, View for button, button]
- * - Add onChangeText event handler on textInput and pass handleSubmit compoent method to it
- * - Add handleSubmit component method
- * - bind(this) to handleSubmit
- * - Setup propTypes for LoginForm
- * - Go over styles 
+ * TODO Step 3:
+ *
+ * 1. Create LoginForm component
+ * 2. Setup component class constructor
+ * 3. Inside of the constructor set the default state of username, 
+ *    i.e. this.state = {username: ''}
+ * 7. Add onChangeText event handler on TextInput and pass handleSubmit 
+ *    component method to it
+ * 8. Add handleSubmit component method
+ * 9. Bind the handleSubmit component method inside of the constuctor, 
+ *    i.e this.handleSubmit = this.handleSubmit.bind(this)
+ * 10. Setup propTypes for LoginForm component and add onSubmit to the propTypes.
+ * 11. Export LoginForm component
  */
+
  const styles = StyleSheet.create({
    container:{
      flex:1,
@@ -64,4 +66,4 @@ import Colors from '../../styles/colors';
      letterSpacing:3
    }
  })
-export default LoginForm;
+

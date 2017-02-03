@@ -2,24 +2,27 @@ import React, {Component} from 'react';
 import {View, Text, StyleSheet, TextInput} from 'react-native';
 import {Actions as RouteActions} from 'react-native-router-flux';
 
-import LoginForm from '../components/user/LoginForm';
+//Uncomment LoginForm Below :)
+//import LoginForm from '../components/user/LoginForm';
 
 /**
- * Step 3:
- * - Create LoginContainer component
- * - Setup constructor
- * - Create View for component
- * - LoginForm
- * - Add onSubmit event handler and pass handleSubmit component method
- * - Add handleSubmit component method with navigation
- * - Set bind(this) to handleSubmit
- * - Go over styles
+ * TODO Step 3:
+ *
+ * 1. Create LoginContainer component
+ * 2. Setup component class constructor
+ * 4. Uncomment imported LoginForm at the top of the file 
+ * 5. Add LoginForm component to LoginContainer render method.
+ * 6. Add onSubmit event handler to LoginForm and pass handleSubmit 
+ *    component method to it
+ * 7. Add handleSubmit component method with dynamic routing using RouteActions.tabbar()
+ * 8. Bind the handleSubmit component method inside of the constuctor, 
+ *    i.e this.handleSubmit = this.handleSubmit.bind(this)
+ * 9. Export LoginContainer component
  */
 
- const styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container:{
     flex:1
   }
 })
 
-export default LoginContainer;

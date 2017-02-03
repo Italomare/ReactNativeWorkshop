@@ -18,10 +18,6 @@ import { Actions as RouteActions } from 'react-native-router-flux';
 /*1.2.3.
 class LoginScene extends Component {
 
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     return (
       <View style={styles.container}>

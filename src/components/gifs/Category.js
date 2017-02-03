@@ -8,7 +8,7 @@ import Colors from '../../styles/colors';
  * 1. Add TouchableHighlight component with onPress property inside of render method
  * 2. Add onSelect(category) prop inside of an arrow function to 
  *    onPress on the TouchableHighlight
- * 3. Add Image Component with source property set to category.uri inside render method
+ * 3. Add Image Component with source property set to category.url inside render method
  * 4. Add Text component with category.title inside render  method
  */
 

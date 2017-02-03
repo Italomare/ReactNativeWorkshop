@@ -19,26 +19,23 @@ export const GET_GIFS_FAILURE = 'GET_GIFS_FAILURE';
 export const SET_CATEGORY = 'SET_CATEGORY';
 
 /**
- * Step 4:
- * L O G I N
- * - Create login function
- * - Create loginRequested function
- * - Create loginSuccess function
- * - Create loginFailure function
- * - Dispatch loginRequested and loginSuccess within login function
+ * TODO Step 4:
+ *
+ * Login
+ * 1. Create login function
+ * 2. Create loginRequested function
+ * 3. Create loginSuccess function
+ * 4. Create loginFailure function
+ * 5. Dispatch loginRequested and loginSuccess within login function
+ *
+ * Get Liked Gifs 
+ * 6. Dispatch getLikesSuccess and getLikesSuccess within getLikes function
+ *
+ * Get Gifs by Category
+ * 7. Dispatch getGifsRequested and getGifsSuccess within getGifs function
+ */
 
-
-/**
-* Login
-*
-* @param username
-*/
-
-/**
-* Step 4:
-* G E T  G I F S  by L I K E
-* - Dispatch getLikesRequested and getLikesSuccess within getLikes function
-*/
+//1.-5. Add here
 
 /**
 * Get Gifs by Likes
@@ -59,7 +56,7 @@ export function getLikes() {
       5: {id: 5, uri: 'https://i.giphy.com/3ohfFn9vOub5BsZZ0k.gif'}
     };
 
-    // Dispatch functions
+    //6. Dispatch getLikesSuccess and getLikesRequested here 
 
   };
 };
@@ -90,8 +87,6 @@ export function getLikesFailure(error) {
 * @param gifId
 * @param uri
 */
-
-
 export function likeRequested() {
   return {
     type: LIKE_REQUESTED
@@ -125,17 +120,10 @@ export function dislike(gif) {
 };
 
 /**
- * Step 4:
- * G E T  G I F S  by C A T E G O R Y
- * - Dispatch getGifsRequested and getGifsSuccess
- */
-
-/**
  * Get Gifs by Category
  *
  * @param category
  */
-
  export function getGifs(category) {
    return (dispatch) => {
 
@@ -168,7 +156,7 @@ export function dislike(gif) {
        ]
      };
 
-     // Dispatch functions
+    //7. Dispatch getGifsRequested and getGifsSuccess here 
 
    };
  };

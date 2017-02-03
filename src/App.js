@@ -4,11 +4,13 @@ import {Scene, Router, TabBar, Icon} from 'react-native-router-flux';
 import { Provider } from 'react-redux';
 
 import configureStore from './store/store'
-const store = configureStore({});
 
 /**
- * Step:4
- * - Wrap Router in Provider and pass in store
+ * TODO Step 4: 
+ *
+ * 1. Create Redux store with imported configureStore function.
+ * 2. Wrap Router Component with imported Provider Component 
+ * 3. Pass the configured store to the store property of the Provider Component
  */
 
 /*

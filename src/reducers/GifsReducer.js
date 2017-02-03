@@ -10,8 +10,10 @@ import {
 } from '../actions/actions';
 
 /**
- * Step:4
- * - Create get gifs success 
+ * TODO Step 4:
+ *
+ * 1. Create LIKE_REQUESTED and GET_GIFS_REQUESTED cases
+ * 2. Create GET_GIFS_SUCCESS case
  */
 
 export default function GifsReducer(state = {category: null, items: {}, isLoading: false, error: null}, action) {
@@ -20,13 +22,13 @@ export default function GifsReducer(state = {category: null, items: {}, isLoadin
       case SET_CATEGORY:
         return {...state, category: action.payload.category};
 
-      case LIKE_REQUESTED:
-      case GET_GIFS_REQUESTED:
-        return {...state, isLoading: true};
+      /**
+       * 1. Add requested cases here
+       */
 
-      // TODO
-      // get gifs success
-
+      /**
+       * 2. Add gif success case here
+       */
 
       case DISLIKE:
       case LIKE_SUCCESS:

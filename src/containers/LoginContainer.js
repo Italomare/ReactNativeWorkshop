@@ -7,6 +7,15 @@ import * as ActionCreators from '../actions/actions';
 
 import LoginForm from '../components/user/LoginForm';
 
+/**
+ * TODO Step 4:
+ *
+ * 1. Uncomment mapDispatch to props and connect export
+ * 2. Delete old export
+ * 3. Add login action from redux Actions inside the handleSubmit component method.
+ *    i.e. this.props.Actions.login(username)
+ */
+
 class LoginContainer extends Component{
 
   constructor(props) {
@@ -37,6 +46,7 @@ const styles = StyleSheet.create({
   }
 })
 
+/* 1. Uncommment me to unleash Redux :)
 function mapDispatchToProps(dispatch) {
   return {
     Actions: bindActionCreators(ActionCreators, dispatch),
@@ -44,3 +54,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(null, mapDispatchToProps)(LoginContainer);
+*/
+
+//2. Delete export below
+export default LoginContainer;

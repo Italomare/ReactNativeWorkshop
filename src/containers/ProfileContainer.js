@@ -8,15 +8,12 @@ import * as ActionCreators from '../actions/actions';
 import GifList from '../components/gifs/GifList';
 
 /**
- * Step:4
- * - Delete this.state object (state is being handled with Redux)
- * - Create lifecycle method to recieve likes before the view is rendered
- * - Setup variable for if there is a user to return gifs or an empty object
- * - Use that variable to get the gif to display if there isn't any gifs return false
- * - mapStateToProps function
- * - return new state of user
- * - mapDispatchToProps function
- * - connect function
+ * TODO Step 4:
+ *
+ * 1. Delete this.state and object inside of component constructor (state is being handled with Redux)
+ * 2. Add componentWillMount component lifecycle method to ProfileContainer 
+ * 3. Inside of componentWillMount use redux Actions.getLikes() to retrieve all liked gifs
+ * 4. Setup variable that gets user gifs from props or assigns an empty object to the variable 
  */
 
 class ProfileContainer extends Component{

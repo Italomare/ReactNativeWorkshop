@@ -9,18 +9,19 @@ import * as ActionCreators from '../actions/actions';
 import CategoriesList from '../components/gifs/CategoriesList';
 
 /**
- * Step:4
- * - Setup actions inside component method to handle setting the
-     category and to get gifs
- * - mapDispatchToProps
- * - connect function
+ * TODO Step 4:
+ *
+ * 1. Add redux Actions inside handleSelection component method to 
+ *    set category and get gifs by category.
+ * 2. Create mapDispatchToProps function
+ * 3. Export CategoriesContainer using imported connect function 
  */
 
 class CategoriesContainer extends Component{
 
   constructor(props){
     super(props);
-      this.handleSelection = this.handleSelection.bind(this)
+    this.handleSelection = this.handleSelection.bind(this)
   }
 
   render(){
@@ -44,8 +45,6 @@ class CategoriesContainer extends Component{
   }
 
   handleSelection(category) {
-    console.log('handle category selection: ', category);
-    console.log('handleSelection actions: ', Actions);
     RouteActions.gifs();
   }
 

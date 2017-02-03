@@ -31,7 +31,7 @@ class GifSelectionContainer extends Component{
 
     let { gifs } = this.props;
 
-    let activeGifId = Object.keys(gifs.items).pop();
+    let activeGifId = gifs && gifs.items ? Object.keys(gifs.items).pop() : null;
 
     if (!activeGifId) return null;
 
@@ -83,3 +83,4 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(GifSelectionContainer);
+

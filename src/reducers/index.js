@@ -9,3 +9,13 @@ import GifsReducer from './GifsReducer';
  * 2. Pass UserReducer to combineReducers config on the user property
  * 3. Pass GifsReducer to combineReducers config on the gifs property
  */
+
+/*1-3 Uncomment Me
+
+export default combineReducers({ 
+  user: UserReducer,
+  gifs: GifsReducer
+});
+
+*/
+

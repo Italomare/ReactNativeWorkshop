@@ -19,35 +19,46 @@ import {
 export default function GifsReducer(state = {category: null, items: {}, isLoading: false, error: null}, action) {
   switch(action.type) {
 
-      case SET_CATEGORY:
+    case SET_CATEGORY:
         return {...state, category: action.payload.category};
 
-      /**
-       * 1. Add requested cases here
-       */
+    /*1. Add requested cases here
 
-      /**
-       * 2. Add gif success case here
-       */
+    case LIKE_REQUESTED:
+    case GET_GIFS_REQUESTED:
+      return {...state, isLoading: true};
 
-      case DISLIKE:
-      case LIKE_SUCCESS:
-        let filteredItems = state.items;
-        delete filteredItems[action.payload.gif.id];
+    */
 
-        return {
-          ...state,
-          isLoading: false,
-          items: Object.assign({}, filteredItems)
-        };
+    /* 2. Add gif success case here
 
-      case GET_GIFS_FAILURE:
-      case LIKE_FAILURE:
-        return {...state, isLoading: false, error: action.payload.error};
+    case GET_GIFS_SUCCESS:
+      return {
+        ...state, 
+        isLoading: false, 
+        items: convertGiphyResponse(action.payload.gifs)
+      };
 
-      default:
-        return state;
-    }
+    */
+
+    case DISLIKE:
+    case LIKE_SUCCESS:
+      let filteredItems = state.items;
+      delete filteredItems[action.payload.gif.id];
+
+      return {
+        ...state,
+        isLoading: false,
+        items: Object.assign({}, filteredItems)
+      };
+
+    case GET_GIFS_FAILURE:
+    case LIKE_FAILURE:
+      return {...state, isLoading: false, error: action.payload.error};
+
+    default:
+      return state;
+  }
 
 }
 

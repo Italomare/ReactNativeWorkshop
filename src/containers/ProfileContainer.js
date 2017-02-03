@@ -14,6 +14,7 @@ import GifList from '../components/gifs/GifList';
  * 2. Add componentWillMount component lifecycle method to ProfileContainer 
  * 3. Inside of componentWillMount use redux Actions.getLikes() to retrieve all liked gifs
  * 4. Setup variable that gets user gifs from props or assigns an empty object to the variable 
+ * 5. Pass gif variable to gifs property on GifList component
  */
 
 class ProfileContainer extends Component{
@@ -21,7 +22,8 @@ class ProfileContainer extends Component{
   constructor(props) {
     super(props);
 
-    this.state = {
+   //1. Delete this.state and object 
+   this.state = {
       gifs: {
         1: {id: 1, uri: 'https://i.giphy.com/xThuWg7lusylvpAVu8.gif'},
         2: {id: 2, uri: 'https://i.giphy.com/l2YWeYNrD6P5nCiCA.gif'},
@@ -33,10 +35,21 @@ class ProfileContainer extends Component{
 
   }
 
+  /*2. Uncomment me :)
+
+  componentWillMount() {
+    //3. this.props.Actions.getLikes();
+  }
+
+  */
+
   render(){
+
+    //4. let userGifs = this.props.user ? this.props.user.gifs : {};
+
     return(
       <View style={styles.container}>
-        <GifList gifs={this.state.gifs} />
+        <GifList gifs={userGifs} />
       </View>
     )
   }

@@ -45,7 +45,16 @@ class CategoriesContainer extends Component{
   }
 
   handleSelection(category) {
+
+    /* 1. Uncomment me
+
+    this.props.Actions.setCategory(category);
+    this.props.Actions.getGifs(category);
+
+    */
+
     RouteActions.gifs();
+
   }
 
 }
@@ -57,4 +66,14 @@ const styles = StyleSheet.create({
   }
 })
 
-export default CategoriesContainer;
+/*2-3 Uncommnet me :)
+
+function mapDispatchToProps(dispatch) {
+  return {
+    Actions: bindActionCreators(ActionCreators, dispatch),
+  };
+}
+
+export default connect(null, mapDispatchToProps)(CategoriesContainer);
+
+*/

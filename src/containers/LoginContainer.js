@@ -33,20 +33,21 @@ class LoginContainer extends Component{
 
   handleSubmit(username) {
 
-    //Navigate to tabbar key
+    //3. this.props.Actions.login(username);
     RouteActions.tabbar();
 
   }
 
 }
 
+/* 1.
+ *
 const styles = StyleSheet.create({
   container:{
     flex:1,
   }
 })
 
-/* 1. Uncommment me to unleash Redux :)
 function mapDispatchToProps(dispatch) {
   return {
     Actions: bindActionCreators(ActionCreators, dispatch),
@@ -57,4 +58,5 @@ export default connect(null, mapDispatchToProps)(LoginContainer);
 */
 
 //2. Delete export below
+export default LoginContainer;
 export default LoginContainer;

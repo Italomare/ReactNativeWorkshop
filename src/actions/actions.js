@@ -35,7 +35,36 @@ export const SET_CATEGORY = 'SET_CATEGORY';
  * 7. Dispatch getGifsRequested and getGifsSuccess within getGifs function
  */
 
-//1.-5. Add here
+/* 1.-5. Uncomment me :)
+export function login(username) {
+  return (dispatch) => {
+
+    dispatch(loginRequested());
+    dispatch(loginSuccess(username));
+
+  };
+};
+
+export function loginRequested() {
+  return {
+    type: LOGIN_REQUESTED
+  };
+};
+
+export function loginSuccess(username) {
+  return {
+    type: LOGIN_SUCCESS,
+    payload: { username }
+  };
+};
+
+export function loginFailure(error) {
+  return{
+    type: LOGIN_FAILURE,
+    payload: { error }
+  }
+}
+*/
 
 /**
 * Get Gifs by Likes
@@ -56,7 +85,10 @@ export function getLikes() {
       5: {id: 5, uri: 'https://i.giphy.com/3ohfFn9vOub5BsZZ0k.gif'}
     };
 
-    //6. Dispatch getLikesSuccess and getLikesRequested here 
+    /*6. Dispatch getLikesSuccess and getLikesRequested here 
+    dispatch(getLikesRequested());
+    dispatch(getLikesSuccess(gifs));
+    */
 
   };
 };
@@ -87,6 +119,15 @@ export function getLikesFailure(error) {
 * @param gifId
 * @param uri
 */
+export function like(gif) {
+  return (dispatch) => {
+
+    dispatch(likeRequested());
+    dispatch(likeSuccess(gif));
+
+  };
+};
+
 export function likeRequested() {
   return {
     type: LIKE_REQUESTED
@@ -156,7 +197,10 @@ export function dislike(gif) {
        ]
      };
 
-    //7. Dispatch getGifsRequested and getGifsSuccess here 
+    /*7. Dispatch getGifsRequested and getGifsSuccess here 
+    dispatch(getGifsRequested());
+    dispatch(getGifsSuccess(giphyResponse.data));
+    */
 
    };
  };

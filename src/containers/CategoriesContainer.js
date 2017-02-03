@@ -19,7 +19,7 @@ class CategoriesContainer extends Component{
 
   constructor(props){
     super(props);
-
+    //5. this.handleSelection = this.handleSelection.bind(this);
   }
 
   render(){
@@ -36,10 +36,17 @@ class CategoriesContainer extends Component{
             {title: 'scream queens', url:'https://i.giphy.com/3oz8xXZ9n58kl59uSc.gif'},
             {title: 'dance', url:'https://i.giphy.com/3o6oziEt5VUgsuunxS.gif'},
           ]}
+          //1.2. onSelect={this.handleSelection}
         />
       </View>
     )
   }
+
+  /*3.
+  handleSelection(category) {
+    //4 .RouteActions.gifs();
+  }
+  */
 
 }
 

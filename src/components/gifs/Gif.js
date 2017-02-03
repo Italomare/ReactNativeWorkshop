@@ -9,7 +9,7 @@ class Gif extends Component{
 
     return(
       <View style={styles.container}>
-        <Image soure={{ uri: gifUri }} style={styles.gif} />
+        <Image source={{ uri: gifUri }} style={styles.gif} />
       </View>
     )
   }

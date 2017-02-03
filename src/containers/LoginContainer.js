@@ -20,9 +20,36 @@ import {Actions as RouteActions} from 'react-native-router-flux';
  * 9. Export LoginContainer component
  */
 
+/*1.2.5.6.
+class LoginContainer extends Component {
+
+  constructor(props) {
+    super(props);
+    //8. this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <LoginForm onSubmit={this.handleSubmit} />
+      </View>
+    );
+  }
+
+  //7.
+  handleSubmit(username) {
+    RouteActions.tabbar();
+  }
+
+}
+*/
+
 const styles = StyleSheet.create({
-  container:{
-    flex:1
+  container: {
+    flex: 1
   }
 })
 
+/*9.
+export default LoginContainer;
+*/

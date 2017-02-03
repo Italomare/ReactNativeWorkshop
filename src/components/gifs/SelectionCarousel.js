@@ -26,13 +26,26 @@ class SelectionCarousel extends Component{
 
   render(){
 
+    /*1.
+    let { gif, onLike, onDislike } = this.props;
+    */
+
     return(
       <View style={styles.container}>
         <View style={styles.gifContainer}>
-          {/* 1. Add Gif inside this View*/}
+        {/*2.3. <Gif gifUri={gif.uri} />*/}
         </View>
         <View style={styles.buttonContainer}>
-          {/* 3. & 4. Add first and second Button components inside this View*/}
+          {/*4.5.
+          <Button onPress={() => onDislike(gif.id)} style={styles.dislikeButton}>
+            Dislike
+          </Button>
+          */}
+          {/*6.7.
+          <Button onPress={() => onLike(gif.id)} style={styles.likeButton}>
+            Like 
+          </Button>
+          */}
         </View>
       </View>
     )

@@ -4,7 +4,7 @@ import {Actions as RouteActions} from 'react-native-router-flux';
 import Button from 'react-native-button'
 
 //Uncomment LoginContainer Below :)
-//import LoginContainer from '../containers/LoginContainer';
+//1. import LoginContainer from '../containers/LoginContainer';
 
 /**
  * TODO Step 3:
@@ -22,6 +22,7 @@ class LoginScene extends Component{
   render(){
     return(
       <View style={styles.container}>
+        {/*3. <LoginContainer/>*/}
         <Text style={styles.text}>Login Scene</Text>
         <Button onPress={RouteActions.tabbar} style={styles.button}>Login</Button>
       </View>
@@ -33,16 +34,17 @@ class LoginScene extends Component{
 const styles = StyleSheet.create({
   container:{
     flex:1,
+    //4. Delete justifyContent below
     justifyContent: 'center',
   },
+  //5. Delete text and button. Dont forget to remove any extra commas 
+  //especially after the container style object
   text:{
     color:'#05668D'
   },
   button: {
     color:'#05668D',
-  }
+  } 
 })
-
-
 
 export default LoginScene;

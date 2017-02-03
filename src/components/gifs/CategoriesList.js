@@ -19,14 +19,36 @@ import Category from './Category';
 
 class CategoriesList extends Component{
 
+  /*1.
+  constructor(props) {
+    super(props);
+    //6. this.getCategories = this.getCategories.bind(this);
+  }
+  */
+
   render(){
 
     return(
       <View style={styles.container}>
-
+        {/*2.3.
+        <ScrollView>
+          {this.getCategories()} 
+        </ScrollView>
+        */}
       </View>
     )
   }
+
+  /*4.5.
+  getCategories() {
+    let {categories, onSelect} = this.props;
+
+    return categories.map((category, i) => {
+      return (<Category key={i} category={category} onSelect={onSelect} />);
+    });
+
+  }
+  */
 
 }
 

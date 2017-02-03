@@ -13,9 +13,9 @@ class Category extends Component{
       <TouchableHighlight onPress={() => onSelect(category)}>
         <View>
           <Image source={{uri: category.url}} style={styles.asset} />
-           <View style={styles.overlay}>
-             <Text style={styles.text}>{category.title}</Text>
-         </View>
+          <View style={styles.overlay}>
+            <Text style={styles.text}>{category.title}</Text>
+          </View>
         </View>
       </TouchableHighlight>
     </View>

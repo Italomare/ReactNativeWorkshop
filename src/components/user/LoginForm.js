@@ -7,17 +7,18 @@ import Colors from '../../styles/colors';
 /**
  * TODO Step 3:
  *
- * 1. Create LoginForm component
- * 2. Setup component class constructor
- * 3. Inside of the constructor set the default state of username, 
+ * 1. Create LoginForm component 
+ * 2. Add Image, TextInput, and Button along with view containers to component render method
+ * 3. Setup component class constructor
+ * 4. Inside of the constructor set the default state of username, 
  *    i.e. this.state = {username: ''}
- * 7. Add onChangeText event handler on TextInput and pass handleSubmit 
+ * 5. Add onChangeText event handler on TextInput and pass handleSubmit 
  *    component method to it
- * 8. Add handleSubmit component method
- * 9. Bind the handleSubmit component method inside of the constuctor, 
+ * 6. Add handleSubmit component method
+ * 7. Bind the handleSubmit component method inside of the constuctor, 
  *    i.e this.handleSubmit = this.handleSubmit.bind(this)
- * 10. Setup propTypes for LoginForm component and add onSubmit to the propTypes.
- * 11. Export LoginForm component
+ * 8. Setup propTypes for LoginForm component and add onSubmit to the propTypes.
+ * 9. Export LoginForm component
  */
 
  const styles = StyleSheet.create({

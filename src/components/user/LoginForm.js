@@ -12,13 +12,14 @@ import Colors from '../../styles/colors';
  * 3. Setup component class constructor
  * 4. Inside of the constructor set the default state of username, 
  *    i.e. this.state = {username: ''}
- * 5. Add onChangeText event handler on TextInput and pass handleSubmit 
- *    component method to it
+ * 5. Add onChangeText property on TextInput and pass this.setState to update the 
+ *    username in the component state.
  * 6. Add handleSubmit component method
  * 7. Bind the handleSubmit component method inside of the constuctor, 
  *    i.e this.handleSubmit = this.handleSubmit.bind(this)
- * 8. Setup propTypes for LoginForm component and add onSubmit to the propTypes.
- * 9. Export LoginForm component
+ * 8. Add the onPress property to the Button component and pass handleSubmit to it.
+ * 9. Setup propTypes for LoginForm component and add onSubmit to the propTypes.
+ * 10. Export LoginForm component
  */
 
  const styles = StyleSheet.create({

@@ -11,7 +11,7 @@ import { Actions as RouteActions} from 'react-native-router-flux';
      return(
        <View style={styles.container}>
          <Text style={styles.text}>Welcome Scene</Text>
-         <Button onPress={RouteActions.login} style={styles.button}>Login</Button>
+         <Button onPress={RouteActions.login} style={styles.button}>get started</Button>
        </View>
      )
    }

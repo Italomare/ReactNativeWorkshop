@@ -16,6 +16,11 @@ import {
  * App Component into the registerComponent 
  */
 
+/*1.
+import App from './src/App';
+*/
+
+//2. Delete Me
 export default class ReactNativeWorkshop extends Component {
   render() {
     return (
@@ -38,6 +43,7 @@ export default class ReactNativeWorkshop extends Component {
   }
 }
 
+//3. Delete Me
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -57,5 +63,9 @@ const styles = StyleSheet.create({
   },
 });
 
-
+//4. Delete Me
 AppRegistry.registerComponent('ReactNativeWorkshop', () => ReactNativeWorkshop);
+
+/*4.
+AppRegistry.registerComponent('ReactNativeWorkshop', () => App);
+*/

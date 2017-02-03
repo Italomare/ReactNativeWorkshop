@@ -24,7 +24,7 @@ import TabIcon from './components/navigation/Tab';
 const App = () => {
   return(
     <Router>
-      {/*
+      {/*1.
       <Scene key="root" >
         <Scene key="Welcome" initial={true} component={WelcomeScene} title='Welcome' direction="vertical"/>
         <Scene key="login" component={LoginScene} title='Login' direction="vertical"/>

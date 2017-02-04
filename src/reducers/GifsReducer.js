@@ -70,7 +70,7 @@ function convertGiphyResponse(gifs){
   let normalizedObj = {};
   
   gifs.forEach((gif) => {
-    let formattedUri = gif.images.fixed_width.url.replace('http', 'https')
+    let formattedUri = gif.images.fixed_width.url;
     normalizedObj[gif.id] = {id: gif.id, uri: formattedUri}; 
   });
 

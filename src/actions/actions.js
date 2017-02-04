@@ -195,7 +195,14 @@ export function getGifs(category) {
     dispatch(getGifsRequested());
     dispatch(getGifsSuccess(giphyResponse.data));
     
-    //3. Implement giphyApi here :)
+    /*3. Implement giphyApi here :)
+
+    giphyApi.getGiphyGifs(category).then((result) => { //retrieving the gifs by calling the api
+     dispatch(getGifsSuccess(result.data)); //dispatching the success
+    }).catch((error) => {
+      dispatch(getGifsFailure(error));
+    }) 
+    */
 
   };
 };

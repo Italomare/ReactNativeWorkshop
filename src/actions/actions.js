@@ -42,7 +42,14 @@ export function login(username) {
     //1. Delete loginSuccess dispatch below 
     dispatch(loginSuccess(username));
     
-    //1. Implement Login FirebaseApi functionality here
+    /*1. Implement Login FirebaseApi functionality here
+
+    FirebaseApi.createUser(username)
+      .then((results) => {
+        dispatch(loginSuccess(username));    
+      }); 
+
+    */
 
   };
 };
@@ -73,15 +80,27 @@ export function loginFailure(error) {
  * @param gif 
  */
 export function like(gif) {
-  return (dispatch) => {
+  return (dispatch, getState) => {
+
+    /*1. Uncomment Me
+
+    let { username } = getState().user;
+
+    */
 
     dispatch(likeRequested());
 
     //2. Delete loginSuccess dispatch below 
     dispatch(likeSuccess(gif));
 
-    //2. Implement like FirebaseApi functionality here
-    //
+    /*2. Implement like FirebaseApi functionality here
+
+    FirebaseApi.like(username, gif)
+      .then((result) => {
+        dispatch(likeSuccess(gif));    
+      });
+
+    */
   };
 };
 
@@ -123,12 +142,15 @@ export function dislike(gif) {
  * @param category
  */
 export function getLikes() {
-  return (dispatch) => {
+  return (dispatch, getState) => {
 
-    /**
-     * Temporary Gifs
-     */
+    /*3. Uncomment Me
 
+    let { username } = getState().user;
+
+    */
+
+    //3. Delete gifs object below.
     let gifs = {
       1: {id: 1, uri: 'https://i.giphy.com/xThuWg7lusylvpAVu8.gif'},
       2: {id: 2, uri: 'https://i.giphy.com/l2YWeYNrD6P5nCiCA.gif'},
@@ -142,7 +164,14 @@ export function getLikes() {
     //3. Delete getLikesSuccess dispatch below 
     dispatch(getLikesSuccess(gifs));
 
-    //3. Implement getLikes FirebaseApi functionality here
+    /*3. Implement getLikes FirebaseApi functionality here
+
+    FirebaseApi.getLikes(username)
+      .then((results) => {
+        dispatch(getLikesSuccess(results));    
+      });
+
+    */
 
   };
 };

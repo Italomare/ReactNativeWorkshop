@@ -40,13 +40,13 @@ class LoginContainer extends Component{
 
 }
 
-/* 1.
- *
 const styles = StyleSheet.create({
   container:{
     flex:1,
   }
 })
+
+/* 1.
 
 function mapDispatchToProps(dispatch) {
   return {

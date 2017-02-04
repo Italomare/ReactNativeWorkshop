@@ -59,4 +59,3 @@ export default connect(null, mapDispatchToProps)(LoginContainer);
 
 //2. Delete export below
 export default LoginContainer;
-export default LoginContainer;

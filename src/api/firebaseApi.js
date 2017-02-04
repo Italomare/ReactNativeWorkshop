@@ -9,10 +9,7 @@ const firebaseConfig = {
   messagingSenderId: "1060807346956"
 };
 
-
-
 const firebaseApp = firebase.initializeApp(firebaseConfig);
-
 
 /**
  * Create a user based on the username

@@ -22,10 +22,11 @@ export const GET_GIFS_FAILURE = 'GET_GIFS_FAILURE';
 export const SET_CATEGORY = 'SET_CATEGORY';
 
 /**
- * Step: 6
- * - Connect login to FirebaseApi 
- * - Connect like to FirebaseApi 
- * - Connect get liked gifs to FirebaseApi 
+ * TODO Step 6:
+ *
+ * 1. Add FirebaseApi.createUser to login action handler
+ * 2. Add FirebaseApi.like to like action handler
+ * 3. Add FirebaseApi.getLikes to getLikes action handler
  */
 
 /**
@@ -38,9 +39,10 @@ export function login(username) {
 
     dispatch(loginRequested());
 
-    //Connect login to FirebaseApi 
-
+    //1. Delete loginSuccess dispatch below 
     dispatch(loginSuccess(username));
+    
+    //1. Implement Login FirebaseApi functionality here
 
   };
 };
@@ -68,18 +70,18 @@ export function loginFailure(error) {
 /**
  * Like a gif
  *
- * @param gifId
- * @param uri
+ * @param gif 
  */
 export function like(gif) {
   return (dispatch) => {
 
     dispatch(likeRequested());
 
-    //Connect like to FirebaseApi
-
+    //2. Delete loginSuccess dispatch below 
     dispatch(likeSuccess(gif));
 
+    //2. Implement like FirebaseApi functionality here
+    //
   };
 };
 
@@ -137,9 +139,10 @@ export function getLikes() {
 
     dispatch(getLikesRequested());
 
-    //Connect get liked gifs to FirebaseApi 
-
+    //3. Delete getLikesSuccess dispatch below 
     dispatch(getLikesSuccess(gifs));
+
+    //3. Implement getLikes FirebaseApi functionality here
 
   };
 };

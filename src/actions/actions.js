@@ -21,8 +21,10 @@ export const GET_GIFS_FAILURE = 'GET_GIFS_FAILURE';
 export const SET_CATEGORY = 'SET_CATEGORY';
 
 /**
- * Step: 5
- * - Implement Giphy API to get gifs by Category
+ * TODO Step 5:
+ *
+ * 1. Delete giphyResponse object inside of getGifs action handler.
+ * 2. Implement giphyApi inside of getGifs action handler
  */
 
 /**
@@ -60,7 +62,7 @@ export function loginFailure(error) {
 }
 
 /**
- * Get Gifs by Category
+ * Get gifs user has liked 
  *
  * @param category
  */
@@ -159,6 +161,7 @@ export function dislike(gif) {
 export function getGifs(category) {
   return (dispatch) => {
 
+    //1. Delete giphyResponse
     let giphyResponse = {
       data: [
         {
@@ -188,8 +191,11 @@ export function getGifs(category) {
       ]
     };
 
+    //2. Delete dispatches below
     dispatch(getGifsRequested());
     dispatch(getGifsSuccess(giphyResponse.data));
+    
+    //3. Implement giphyApi here :)
 
   };
 };
